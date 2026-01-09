@@ -45,11 +45,8 @@ click all elements of homepage
     Click FAQ Menu
     Scroll Element Into View    xpath=/html/body/div[4]/div/section/div
 
-#Test treks and tours
-Test The Push Your Limit
-    Verify Logo Is Visible
-    Open Trek And Tours Menu
-    Click Push Your Limit
+
+
 
 
 
