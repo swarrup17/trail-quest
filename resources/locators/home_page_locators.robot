@@ -21,3 +21,10 @@ ${explore_the_ancients}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div
 #push your limit buttons
 ${header}    xpath=/html/body/section[1]/div/h1
 
+#Everest 3 passes trek
+${everest_picture}    xpath=//img[contains(@alt,'Everest 3 Passes Trek')]
+${everest_content}    xpath=//span[contains(text(),'Everest 3 Passes Trek')]
+
+${everest_favorite}    xpath=//button[.//i[contains(@class,'icon-heart')]]
+${everest_cart}    xpath=//button[@type='submit' and .//i[contains(@class,'fa-cart-shopping')]]
+

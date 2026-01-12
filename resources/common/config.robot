@@ -1,4 +1,4 @@
 *** Variables ***
-${BASE_URL}    https://staging.trailquest.global/
+${BASE_URL}    https://trailquest.global/
 ${BROWSER}     chrome
 ${TIMEOUT}     10s
