@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-
+Library    String
 *** Keywords ***
 Wait And Click
     [Arguments]    ${locator}
