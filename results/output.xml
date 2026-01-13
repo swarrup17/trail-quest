@@ -1,49 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260113 14:38:27.781" rpa="false" schemaversion="4">
-<suite id="s1" name="Treks Tours" source="C:\Users\Swarup Dahal\PycharmProjects\trail-quest\tests\treks_tours.robot">
-<test id="s1-t1" name="Treks and Tours Test" line="9">
+<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260113 15:24:30.761" rpa="false" schemaversion="4">
+<suite id="s1" name="Home Page Button" source="C:\Users\Swarup Dahal\PycharmProjects\trail-quest\tests\home_page_button.robot">
+<test id="s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
 <kw name="Open Homepage" library="home_page">
 <kw name="Open Browser To Application" library="browser">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260113 14:38:28.247" level="INFO">Opening browser 'Chrome' to base url 'https://trailquest.global/'.</msg>
-<status status="PASS" starttime="20260113 14:38:28.246" endtime="20260113 14:38:32.681"/>
+<msg timestamp="20260113 15:24:31.212" level="INFO">Opening browser 'Chrome' to base url 'https://trailquest.global/'.</msg>
+<status status="PASS" starttime="20260113 15:24:31.211" endtime="20260113 15:24:35.839"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260113 14:38:32.681" endtime="20260113 14:38:32.755"/>
+<status status="PASS" starttime="20260113 15:24:35.839" endtime="20260113 15:24:35.905"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20260113 14:38:32.755" endtime="20260113 14:38:32.759"/>
+<status status="PASS" starttime="20260113 15:24:35.905" endtime="20260113 15:24:35.910"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:28.246" endtime="20260113 14:38:32.759"/>
+<status status="PASS" starttime="20260113 15:24:31.211" endtime="20260113 15:24:35.911"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:34.760" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260113 14:38:32.759" endtime="20260113 14:38:34.760"/>
+<msg timestamp="20260113 15:24:37.912" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:35.911" endtime="20260113 15:24:37.913"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:28.245" endtime="20260113 14:38:34.760"/>
+<status status="PASS" starttime="20260113 15:24:31.211" endtime="20260113 15:24:37.913"/>
+</kw>
+<kw name="click all elements of homepage" library="home_page">
+<kw name="Verify Logo Is Visible" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:37.914" endtime="20260113 15:24:37.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:39.944" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:37.943" endtime="20260113 15:24:39.944"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:37.914" endtime="20260113 15:24:39.944"/>
+</kw>
+<kw name="Click Home Menu" library="home_page">
+<kw name="Wait And Click" library="keywords">
+<arg>${home}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:39.945" endtime="20260113 15:24:39.965"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260113 15:24:39.966" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20260113 15:24:39.966" endtime="20260113 15:24:41.955"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:39.945" endtime="20260113 15:24:41.955"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:43.956" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:41.955" endtime="20260113 15:24:43.956"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:39.944" endtime="20260113 15:24:43.956"/>
+</kw>
+<kw name="Open Trek And Tours Menu" library="home_page">
+<kw name="Wait And Click" library="keywords">
+<arg>${trek_and_tours}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:43.957" endtime="20260113 15:24:43.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260113 15:24:43.982" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i'.</msg>
+<status status="PASS" starttime="20260113 15:24:43.982" endtime="20260113 15:24:44.049"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:43.956" endtime="20260113 15:24:44.049"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:46.050" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:44.049" endtime="20260113 15:24:46.050"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:43.956" endtime="20260113 15:24:46.050"/>
+</kw>
+<kw name="Click About Menu" library="home_page">
+<kw name="Wait And Click" library="keywords">
+<arg>${About}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:46.051" endtime="20260113 15:24:46.077"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260113 15:24:46.078" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[3]/a/span'.</msg>
+<status status="PASS" starttime="20260113 15:24:46.077" endtime="20260113 15:24:46.144"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:46.050" endtime="20260113 15:24:46.144"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:48.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:46.144" endtime="20260113 15:24:48.145"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:46.050" endtime="20260113 15:24:48.145"/>
+</kw>
+<kw name="Click Contact Menu" library="home_page">
+<kw name="Wait And Click" library="keywords">
+<arg>${Contact}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:48.146" endtime="20260113 15:24:48.165"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260113 15:24:48.166" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20260113 15:24:48.166" endtime="20260113 15:24:49.369"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:48.146" endtime="20260113 15:24:49.369"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:51.370" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:49.369" endtime="20260113 15:24:51.370"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:48.146" endtime="20260113 15:24:51.370"/>
+</kw>
+<kw name="Click FAQ Menu" library="home_page">
+<kw name="Wait And Click" library="keywords">
+<arg>${FAQ}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260113 15:24:51.371" endtime="20260113 15:24:51.390"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260113 15:24:51.391" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20260113 15:24:51.390" endtime="20260113 15:24:52.493"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:51.370" endtime="20260113 15:24:52.493"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:24:54.494" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:24:52.494" endtime="20260113 15:24:54.495"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:51.370" endtime="20260113 15:24:54.495"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[4]/div/section/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20260113 15:24:54.495" endtime="20260113 15:24:54.795"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:37.913" endtime="20260113 15:24:54.795"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260113 15:24:54.795" endtime="20260113 15:24:57.047"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:31.210" endtime="20260113 15:24:57.048"/>
+</test>
+<test id="s1-t2" name="Treks and Tours Test" line="12">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260113 15:24:57.050" level="INFO">Opening browser 'Chrome' to base url 'https://trailquest.global/'.</msg>
+<status status="PASS" starttime="20260113 15:24:57.050" endtime="20260113 15:25:01.653"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20260113 15:25:01.653" endtime="20260113 15:25:01.727"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20260113 15:25:01.727" endtime="20260113 15:25:01.730"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:57.049" endtime="20260113 15:25:01.730"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260113 15:25:03.732" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:25:01.731" endtime="20260113 15:25:03.733"/>
+</kw>
+<status status="PASS" starttime="20260113 15:24:57.049" endtime="20260113 15:25:03.733"/>
 </kw>
 <kw name="Test The Push Your Limit" library="treks_tours">
 <kw name="Verify Logo Is Visible" library="treks_tours">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${logo}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:34.761" endtime="20260113 14:38:34.792"/>
+<status status="PASS" starttime="20260113 15:25:03.734" endtime="20260113 15:25:03.761"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:36.792" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260113 14:38:34.792" endtime="20260113 14:38:36.792"/>
+<msg timestamp="20260113 15:25:05.762" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:25:03.761" endtime="20260113 15:25:05.762"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:34.761" endtime="20260113 14:38:36.793"/>
+<status status="PASS" starttime="20260113 15:25:03.734" endtime="20260113 15:25:05.762"/>
 </kw>
 <kw name="Open Trek And Tours Menu" library="treks_tours">
 <kw name="Wait And Click" library="keywords">
@@ -51,23 +228,23 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:36.793" endtime="20260113 14:38:36.813"/>
+<status status="PASS" starttime="20260113 15:25:05.763" endtime="20260113 15:25:05.783"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:36.813" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i'.</msg>
-<status status="PASS" starttime="20260113 14:38:36.813" endtime="20260113 14:38:36.882"/>
+<msg timestamp="20260113 15:25:05.784" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i'.</msg>
+<status status="PASS" starttime="20260113 15:25:05.783" endtime="20260113 15:25:05.853"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:36.793" endtime="20260113 14:38:36.882"/>
+<status status="PASS" starttime="20260113 15:25:05.763" endtime="20260113 15:25:05.853"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:38.882" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260113 14:38:36.882" endtime="20260113 14:38:38.882"/>
+<msg timestamp="20260113 15:25:07.854" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:25:05.854" endtime="20260113 15:25:07.854"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:36.793" endtime="20260113 14:38:38.883"/>
+<status status="PASS" starttime="20260113 15:25:05.762" endtime="20260113 15:25:07.854"/>
 </kw>
 <kw name="Click Push Your Limit" library="treks_tours">
 <kw name="Wait And Click" library="keywords">
@@ -75,37 +252,37 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:38.883" endtime="20260113 14:38:38.903"/>
+<status status="PASS" starttime="20260113 15:25:07.855" endtime="20260113 15:25:07.875"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:38.904" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20260113 14:38:38.904" endtime="20260113 14:38:40.637"/>
+<msg timestamp="20260113 15:25:07.876" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20260113 15:25:07.875" endtime="20260113 15:25:11.951"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:38.883" endtime="20260113 14:38:40.637"/>
+<status status="PASS" starttime="20260113 15:25:07.855" endtime="20260113 15:25:11.951"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:42.638" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260113 14:38:40.638" endtime="20260113 14:38:42.638"/>
+<msg timestamp="20260113 15:25:13.952" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:25:11.951" endtime="20260113 15:25:13.952"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:38.883" endtime="20260113 14:38:42.639"/>
+<status status="PASS" starttime="20260113 15:25:07.854" endtime="20260113 15:25:13.952"/>
 </kw>
 <kw name="Go Down to" library="treks_tours">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${header}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:42.639" endtime="20260113 14:38:42.938"/>
+<status status="PASS" starttime="20260113 15:25:13.953" endtime="20260113 15:25:14.244"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:44.939" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260113 14:38:42.938" endtime="20260113 14:38:44.939"/>
+<msg timestamp="20260113 15:25:16.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260113 15:25:14.245" endtime="20260113 15:25:16.245"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:42.639" endtime="20260113 14:38:44.939"/>
+<status status="PASS" starttime="20260113 15:25:13.953" endtime="20260113 15:25:16.245"/>
 </kw>
 <kw name="Click Easy" library="treks_tours">
 <kw name="Wait And Click" library="keywords">
@@ -113,17 +290,17 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:44.940" endtime="20260113 14:38:44.959"/>
+<status status="PASS" starttime="20260113 15:25:16.246" endtime="20260113 15:25:16.266"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:44.960" level="INFO">Clicking element 'xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3'.</msg>
-<status status="PASS" starttime="20260113 14:38:44.960" endtime="20260113 14:38:45.017"/>
+<msg timestamp="20260113 15:25:16.267" level="INFO">Clicking element 'xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3'.</msg>
+<status status="PASS" starttime="20260113 15:25:16.267" endtime="20260113 15:25:16.323"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:44.939" endtime="20260113 14:38:45.018"/>
+<status status="PASS" starttime="20260113 15:25:16.246" endtime="20260113 15:25:16.323"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:44.939" endtime="20260113 14:38:45.018"/>
+<status status="PASS" starttime="20260113 15:25:16.245" endtime="20260113 15:25:16.323"/>
 </kw>
 <kw name="Click Everest Picture" library="treks_tours">
 <kw name="Wait And Click" library="keywords">
@@ -131,473 +308,473 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:45.018" endtime="20260113 14:38:45.038"/>
+<status status="PASS" starttime="20260113 15:25:16.324" endtime="20260113 15:25:16.343"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:45.039" level="INFO">Clicking element 'xpath=//img[contains(@alt,'Everest 3 Passes Trek')]'.</msg>
-<status status="PASS" starttime="20260113 14:38:45.038" endtime="20260113 14:38:46.675"/>
+<msg timestamp="20260113 15:25:16.344" level="INFO">Clicking element 'xpath=//img[contains(@alt,'Everest 3 Passes Trek')]'.</msg>
+<status status="PASS" starttime="20260113 15:25:16.343" endtime="20260113 15:25:18.634"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:45.018" endtime="20260113 14:38:46.675"/>
+<status status="PASS" starttime="20260113 15:25:16.324" endtime="20260113 15:25:18.634"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${everest_header}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260113 14:38:46.675" endtime="20260113 14:38:46.712"/>
+<status status="PASS" starttime="20260113 15:25:18.634" endtime="20260113 15:25:18.662"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:45.018" endtime="20260113 14:38:46.712"/>
+<status status="PASS" starttime="20260113 15:25:16.324" endtime="20260113 15:25:18.663"/>
 </kw>
 <kw name="Click All Sticky Navbar Links" library="treks_tours">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${nav_bar}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:46.713" endtime="20260113 14:38:47.016"/>
+<status status="PASS" starttime="20260113 15:25:18.663" endtime="20260113 15:25:18.962"/>
 </kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${section}</var>
 <arg>xpath=//*[@data-section='nav-intro']</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20260113 14:38:47.030" level="INFO">${section} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.120")&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:47.017" endtime="20260113 14:38:47.030"/>
+<msg timestamp="20260113 15:25:18.975" level="INFO">${section} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.119")&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:18.962" endtime="20260113 15:25:18.975"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>${nav_links}</var>
 <arg>xpath=//nav[contains(@class,'sticky-navbar')][1]//ul/li/a[contains(@class,'nav-link')]</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20260113 14:38:47.045" level="INFO">${nav_links} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.120")&gt;, &lt;selenium.webdri...</msg>
-<status status="PASS" starttime="20260113 14:38:47.030" endtime="20260113 14:38:47.045"/>
+<msg timestamp="20260113 15:25:18.989" level="INFO">${nav_links} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.119")&gt;, &lt;selenium.webdri...</msg>
+<status status="PASS" starttime="20260113 15:25:18.975" endtime="20260113 15:25:18.989"/>
 </kw>
 <for flavor="IN">
 <var>${link}</var>
 <value>@{nav_links}</value>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.120")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.119")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:47.063" level="INFO">${link_text} = Intro</msg>
-<status status="PASS" starttime="20260113 14:38:47.045" endtime="20260113 14:38:47.063"/>
+<msg timestamp="20260113 15:25:19.005" level="INFO">${link_text} = Intro</msg>
+<status status="PASS" starttime="20260113 15:25:18.989" endtime="20260113 15:25:19.005"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:47.063" level="INFO">Clicking navbar link: Intro</msg>
-<status status="PASS" starttime="20260113 14:38:47.063" endtime="20260113 14:38:47.063"/>
+<msg timestamp="20260113 15:25:19.005" level="INFO">Clicking navbar link: Intro</msg>
+<status status="PASS" starttime="20260113 15:25:19.005" endtime="20260113 15:25:19.005"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:47.063" endtime="20260113 14:38:47.348"/>
+<status status="PASS" starttime="20260113 15:25:19.005" endtime="20260113 15:25:19.294"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:47.850" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:47.349" endtime="20260113 14:38:47.850"/>
+<msg timestamp="20260113 15:25:19.795" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:19.294" endtime="20260113 15:25:19.795"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:47.851" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.120")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:47.851" endtime="20260113 14:38:47.925"/>
+<msg timestamp="20260113 15:25:19.797" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.119")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:19.796" endtime="20260113 15:25:19.871"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:48.926" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:47.926" endtime="20260113 14:38:48.927"/>
+<msg timestamp="20260113 15:25:20.871" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:19.871" endtime="20260113 15:25:20.871"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:49.074" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:48.927" endtime="20260113 14:38:49.074"/>
+<msg timestamp="20260113 15:25:21.014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:20.872" endtime="20260113 15:25:21.014"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:47.045" endtime="20260113 14:38:49.074"/>
+<status status="PASS" starttime="20260113 15:25:18.989" endtime="20260113 15:25:21.014"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.121")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.120")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:49.084" level="INFO">${link_text} = KBYG</msg>
-<status status="PASS" starttime="20260113 14:38:49.075" endtime="20260113 14:38:49.084"/>
+<msg timestamp="20260113 15:25:21.023" level="INFO">${link_text} = KBYG</msg>
+<status status="PASS" starttime="20260113 15:25:21.014" endtime="20260113 15:25:21.023"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:49.084" level="INFO">Clicking navbar link: KBYG</msg>
-<status status="PASS" starttime="20260113 14:38:49.084" endtime="20260113 14:38:49.084"/>
+<msg timestamp="20260113 15:25:21.024" level="INFO">Clicking navbar link: KBYG</msg>
+<status status="PASS" starttime="20260113 15:25:21.023" endtime="20260113 15:25:21.024"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:49.084" endtime="20260113 14:38:49.364"/>
+<status status="PASS" starttime="20260113 15:25:21.024" endtime="20260113 15:25:21.310"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:49.865" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:49.365" endtime="20260113 14:38:49.865"/>
+<msg timestamp="20260113 15:25:21.811" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:21.310" endtime="20260113 15:25:21.811"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:49.866" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.121")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:49.866" endtime="20260113 14:38:49.913"/>
+<msg timestamp="20260113 15:25:21.812" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.120")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:21.812" endtime="20260113 15:25:21.861"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:50.914" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:49.913" endtime="20260113 14:38:50.914"/>
+<msg timestamp="20260113 15:25:22.861" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:21.861" endtime="20260113 15:25:22.861"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:51.050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:50.914" endtime="20260113 14:38:51.051"/>
+<msg timestamp="20260113 15:25:22.991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:22.862" endtime="20260113 15:25:22.991"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:49.075" endtime="20260113 14:38:51.051"/>
+<status status="PASS" starttime="20260113 15:25:21.014" endtime="20260113 15:25:22.991"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.122")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.121")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:51.060" level="INFO">${link_text} = Hightlights</msg>
-<status status="PASS" starttime="20260113 14:38:51.051" endtime="20260113 14:38:51.060"/>
+<msg timestamp="20260113 15:25:23.000" level="INFO">${link_text} = Hightlights</msg>
+<status status="PASS" starttime="20260113 15:25:22.991" endtime="20260113 15:25:23.000"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:51.060" level="INFO">Clicking navbar link: Hightlights</msg>
-<status status="PASS" starttime="20260113 14:38:51.060" endtime="20260113 14:38:51.060"/>
+<msg timestamp="20260113 15:25:23.001" level="INFO">Clicking navbar link: Hightlights</msg>
+<status status="PASS" starttime="20260113 15:25:23.000" endtime="20260113 15:25:23.001"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:51.060" endtime="20260113 14:38:51.348"/>
+<status status="PASS" starttime="20260113 15:25:23.001" endtime="20260113 15:25:23.277"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:51.850" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:51.349" endtime="20260113 14:38:51.850"/>
+<msg timestamp="20260113 15:25:23.778" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:23.277" endtime="20260113 15:25:23.778"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:51.851" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.122")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:51.850" endtime="20260113 14:38:51.899"/>
+<msg timestamp="20260113 15:25:23.779" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.121")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:23.778" endtime="20260113 15:25:23.830"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:52.900" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:51.899" endtime="20260113 14:38:52.900"/>
+<msg timestamp="20260113 15:25:24.830" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:23.830" endtime="20260113 15:25:24.831"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:53.035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:52.900" endtime="20260113 14:38:53.036"/>
+<msg timestamp="20260113 15:25:24.971" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:24.831" endtime="20260113 15:25:24.971"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:51.051" endtime="20260113 14:38:53.036"/>
+<status status="PASS" starttime="20260113 15:25:22.991" endtime="20260113 15:25:24.971"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.123")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.122")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:53.044" level="INFO">${link_text} = Who For</msg>
-<status status="PASS" starttime="20260113 14:38:53.036" endtime="20260113 14:38:53.044"/>
+<msg timestamp="20260113 15:25:24.980" level="INFO">${link_text} = Who For</msg>
+<status status="PASS" starttime="20260113 15:25:24.971" endtime="20260113 15:25:24.980"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:53.045" level="INFO">Clicking navbar link: Who For</msg>
-<status status="PASS" starttime="20260113 14:38:53.045" endtime="20260113 14:38:53.045"/>
+<msg timestamp="20260113 15:25:24.981" level="INFO">Clicking navbar link: Who For</msg>
+<status status="PASS" starttime="20260113 15:25:24.980" endtime="20260113 15:25:24.981"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:53.045" endtime="20260113 14:38:53.332"/>
+<status status="PASS" starttime="20260113 15:25:24.981" endtime="20260113 15:25:25.260"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:53.832" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:53.332" endtime="20260113 14:38:53.833"/>
+<msg timestamp="20260113 15:25:25.761" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:25.260" endtime="20260113 15:25:25.762"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:53.833" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.123")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:53.833" endtime="20260113 14:38:53.880"/>
+<msg timestamp="20260113 15:25:25.762" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.122")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:25.762" endtime="20260113 15:25:25.812"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:54.881" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:53.880" endtime="20260113 14:38:54.881"/>
+<msg timestamp="20260113 15:25:26.812" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:25.812" endtime="20260113 15:25:26.812"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:55.021" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:54.881" endtime="20260113 14:38:55.021"/>
+<msg timestamp="20260113 15:25:26.943" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:26.813" endtime="20260113 15:25:26.943"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:53.036" endtime="20260113 14:38:55.021"/>
+<status status="PASS" starttime="20260113 15:25:24.971" endtime="20260113 15:25:26.943"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.124")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.123")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:55.030" level="INFO">${link_text} = Who Not For</msg>
-<status status="PASS" starttime="20260113 14:38:55.021" endtime="20260113 14:38:55.030"/>
+<msg timestamp="20260113 15:25:26.952" level="INFO">${link_text} = Who Not For</msg>
+<status status="PASS" starttime="20260113 15:25:26.943" endtime="20260113 15:25:26.952"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:55.030" level="INFO">Clicking navbar link: Who Not For</msg>
-<status status="PASS" starttime="20260113 14:38:55.030" endtime="20260113 14:38:55.031"/>
+<msg timestamp="20260113 15:25:26.953" level="INFO">Clicking navbar link: Who Not For</msg>
+<status status="PASS" starttime="20260113 15:25:26.952" endtime="20260113 15:25:26.953"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:55.031" endtime="20260113 14:38:55.315"/>
+<status status="PASS" starttime="20260113 15:25:26.953" endtime="20260113 15:25:27.242"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:55.816" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:55.315" endtime="20260113 14:38:55.817"/>
+<msg timestamp="20260113 15:25:27.743" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:27.242" endtime="20260113 15:25:27.743"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:55.817" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.124")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:55.817" endtime="20260113 14:38:55.866"/>
+<msg timestamp="20260113 15:25:27.744" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.123")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:27.743" endtime="20260113 15:25:27.792"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:56.867" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:55.866" endtime="20260113 14:38:56.867"/>
+<msg timestamp="20260113 15:25:28.792" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:27.792" endtime="20260113 15:25:28.793"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:56.999" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:56.868" endtime="20260113 14:38:57.000"/>
+<msg timestamp="20260113 15:25:28.932" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:28.793" endtime="20260113 15:25:28.932"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:55.021" endtime="20260113 14:38:57.000"/>
+<status status="PASS" starttime="20260113 15:25:26.943" endtime="20260113 15:25:28.932"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.125")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.124")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:57.009" level="INFO">${link_text} = Itinerary</msg>
-<status status="PASS" starttime="20260113 14:38:57.000" endtime="20260113 14:38:57.009"/>
+<msg timestamp="20260113 15:25:28.942" level="INFO">${link_text} = Itinerary</msg>
+<status status="PASS" starttime="20260113 15:25:28.933" endtime="20260113 15:25:28.942"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:57.009" level="INFO">Clicking navbar link: Itinerary</msg>
-<status status="PASS" starttime="20260113 14:38:57.009" endtime="20260113 14:38:57.009"/>
+<msg timestamp="20260113 15:25:28.943" level="INFO">Clicking navbar link: Itinerary</msg>
+<status status="PASS" starttime="20260113 15:25:28.942" endtime="20260113 15:25:28.943"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:57.009" endtime="20260113 14:38:57.298"/>
+<status status="PASS" starttime="20260113 15:25:28.943" endtime="20260113 15:25:29.227"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:57.799" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:57.299" endtime="20260113 14:38:57.799"/>
+<msg timestamp="20260113 15:25:29.728" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:29.227" endtime="20260113 15:25:29.728"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:57.800" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.125")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:57.799" endtime="20260113 14:38:57.855"/>
+<msg timestamp="20260113 15:25:29.729" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.124")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:29.728" endtime="20260113 15:25:29.778"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:58.856" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:57.855" endtime="20260113 14:38:58.856"/>
+<msg timestamp="20260113 15:25:30.779" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:29.779" endtime="20260113 15:25:30.779"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:38:59.090" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:38:58.856" endtime="20260113 14:38:59.090"/>
+<msg timestamp="20260113 15:25:31.012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:30.779" endtime="20260113 15:25:31.012"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:57.000" endtime="20260113 14:38:59.090"/>
+<status status="PASS" starttime="20260113 15:25:28.933" endtime="20260113 15:25:31.012"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.126")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.125")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:59.106" level="INFO">${link_text} = Includes/Excludes</msg>
-<status status="PASS" starttime="20260113 14:38:59.090" endtime="20260113 14:38:59.106"/>
+<msg timestamp="20260113 15:25:31.022" level="INFO">${link_text} = Includes/Excludes</msg>
+<status status="PASS" starttime="20260113 15:25:31.013" endtime="20260113 15:25:31.022"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:38:59.106" level="INFO">Clicking navbar link: Includes/Excludes</msg>
-<status status="PASS" starttime="20260113 14:38:59.106" endtime="20260113 14:38:59.107"/>
+<msg timestamp="20260113 15:25:31.022" level="INFO">Clicking navbar link: Includes/Excludes</msg>
+<status status="PASS" starttime="20260113 15:25:31.022" endtime="20260113 15:25:31.022"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:38:59.107" endtime="20260113 14:38:59.398"/>
+<status status="PASS" starttime="20260113 15:25:31.022" endtime="20260113 15:25:31.310"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:38:59.899" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:38:59.398" endtime="20260113 14:38:59.899"/>
+<msg timestamp="20260113 15:25:31.810" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:31.310" endtime="20260113 15:25:31.811"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:38:59.900" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.126")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:38:59.899" endtime="20260113 14:38:59.947"/>
+<msg timestamp="20260113 15:25:31.811" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.125")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:31.811" endtime="20260113 15:25:31.859"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:39:00.948" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:38:59.947" endtime="20260113 14:39:00.948"/>
+<msg timestamp="20260113 15:25:32.860" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:31.859" endtime="20260113 15:25:32.860"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:39:01.082" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:39:00.948" endtime="20260113 14:39:01.082"/>
+<msg timestamp="20260113 15:25:32.997" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:32.860" endtime="20260113 15:25:32.997"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:59.090" endtime="20260113 14:39:01.082"/>
+<status status="PASS" starttime="20260113 15:25:31.012" endtime="20260113 15:25:32.997"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.127")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.126")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:39:01.091" level="INFO">${link_text} = Imp Info</msg>
-<status status="PASS" starttime="20260113 14:39:01.082" endtime="20260113 14:39:01.091"/>
+<msg timestamp="20260113 15:25:33.006" level="INFO">${link_text} = Imp Info</msg>
+<status status="PASS" starttime="20260113 15:25:32.997" endtime="20260113 15:25:33.006"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:39:01.091" level="INFO">Clicking navbar link: Imp Info</msg>
-<status status="PASS" starttime="20260113 14:39:01.091" endtime="20260113 14:39:01.091"/>
+<msg timestamp="20260113 15:25:33.006" level="INFO">Clicking navbar link: Imp Info</msg>
+<status status="PASS" starttime="20260113 15:25:33.006" endtime="20260113 15:25:33.006"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:39:01.092" endtime="20260113 14:39:01.382"/>
+<status status="PASS" starttime="20260113 15:25:33.007" endtime="20260113 15:25:33.293"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:39:01.883" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:39:01.382" endtime="20260113 14:39:01.883"/>
+<msg timestamp="20260113 15:25:33.795" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:33.293" endtime="20260113 15:25:33.795"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:39:01.884" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.127")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:39:01.883" endtime="20260113 14:39:01.928"/>
+<msg timestamp="20260113 15:25:33.796" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.126")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:33.795" endtime="20260113 15:25:33.840"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:39:02.929" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:39:01.928" endtime="20260113 14:39:02.929"/>
+<msg timestamp="20260113 15:25:34.840" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:33.840" endtime="20260113 15:25:34.841"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:39:03.056" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:39:02.929" endtime="20260113 14:39:03.056"/>
+<msg timestamp="20260113 15:25:34.971" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-70.png"&gt;&lt;img src="selenium-screenshot-70.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:34.841" endtime="20260113 15:25:34.971"/>
 </kw>
-<status status="PASS" starttime="20260113 14:39:01.082" endtime="20260113 14:39:03.056"/>
+<status status="PASS" starttime="20260113 15:25:32.997" endtime="20260113 15:25:34.971"/>
 </iter>
 <iter>
-<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.128")&gt;</var>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.127")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${link_text}</var>
 <arg>${link}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:39:03.066" level="INFO">${link_text} = FAQS</msg>
-<status status="PASS" starttime="20260113 14:39:03.056" endtime="20260113 14:39:03.066"/>
+<msg timestamp="20260113 15:25:34.980" level="INFO">${link_text} = FAQS</msg>
+<status status="PASS" starttime="20260113 15:25:34.972" endtime="20260113 15:25:34.980"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking navbar link: ${link_text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20260113 14:39:03.066" level="INFO">Clicking navbar link: FAQS</msg>
-<status status="PASS" starttime="20260113 14:39:03.066" endtime="20260113 14:39:03.066"/>
+<msg timestamp="20260113 15:25:34.981" level="INFO">Clicking navbar link: FAQS</msg>
+<status status="PASS" starttime="20260113 15:25:34.980" endtime="20260113 15:25:34.981"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260113 14:39:03.066" endtime="20260113 14:39:03.348"/>
+<status status="PASS" starttime="20260113 15:25:34.981" endtime="20260113 15:25:35.260"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:39:03.849" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20260113 14:39:03.348" endtime="20260113 14:39:03.849"/>
+<msg timestamp="20260113 15:25:35.761" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260113 15:25:35.260" endtime="20260113 15:25:35.761"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260113 14:39:03.850" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3add5b004eaa13e776b6c5d8d6b3ac9", element="f.38E53E846D7A49F6E80509A383999AEF.d.1574AF34BBBFA33DF82534BC079FE558.e.128")&gt;'.</msg>
-<status status="PASS" starttime="20260113 14:39:03.849" endtime="20260113 14:39:03.898"/>
+<msg timestamp="20260113 15:25:35.762" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4bcce85fd68ce53a9f8cc42051ef240e", element="f.1FF40FADE41854519D71930A1FC6F73A.d.2F0B52971EC078FB0D0177E2A74D9CCF.e.127")&gt;'.</msg>
+<status status="PASS" starttime="20260113 15:25:35.762" endtime="20260113 15:25:35.813"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260113 14:39:04.898" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260113 14:39:03.898" endtime="20260113 14:39:04.899"/>
+<msg timestamp="20260113 15:25:36.814" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260113 15:25:35.813" endtime="20260113 15:25:36.814"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20260113 14:39:05.054" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20260113 14:39:04.899" endtime="20260113 14:39:05.054"/>
+<msg timestamp="20260113 15:25:36.960" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-71.png"&gt;&lt;img src="selenium-screenshot-71.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260113 15:25:36.814" endtime="20260113 15:25:36.960"/>
 </kw>
-<status status="PASS" starttime="20260113 14:39:03.056" endtime="20260113 14:39:05.054"/>
+<status status="PASS" starttime="20260113 15:25:34.971" endtime="20260113 15:25:36.960"/>
 </iter>
-<status status="PASS" starttime="20260113 14:38:47.045" endtime="20260113 14:39:05.054"/>
+<status status="PASS" starttime="20260113 15:25:18.989" endtime="20260113 15:25:36.960"/>
 </for>
-<status status="PASS" starttime="20260113 14:38:46.713" endtime="20260113 14:39:05.054"/>
+<status status="PASS" starttime="20260113 15:25:18.663" endtime="20260113 15:25:36.960"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:34.761" endtime="20260113 14:39:05.054"/>
+<status status="PASS" starttime="20260113 15:25:03.733" endtime="20260113 15:25:36.960"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260113 14:39:05.055" endtime="20260113 14:39:07.296"/>
+<status status="PASS" starttime="20260113 15:25:36.961" endtime="20260113 15:25:39.185"/>
 </kw>
-<status status="PASS" starttime="20260113 14:38:28.245" endtime="20260113 14:39:07.297"/>
+<status status="PASS" starttime="20260113 15:24:57.049" endtime="20260113 15:25:39.185"/>
 </test>
-<status status="PASS" starttime="20260113 14:38:27.784" endtime="20260113 14:39:07.298"/>
+<status status="PASS" starttime="20260113 15:24:30.763" endtime="20260113 15:25:39.187"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Treks Tours">Treks Tours</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Home Page Button">Home Page Button</stat>
 </suite>
 </statistics>
 <errors>

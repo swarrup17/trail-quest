@@ -45,4 +45,3 @@ ${e_faq}    xpath=/html/body/div[3]/nav/div/div/ul/li[9]/a
 ${into_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[1]/div/div/p[3]/span/span
 ${kbyg_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[2]/div/div[2]
 ${high_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[3]/div/div[2]/div/div[2]/div
-
