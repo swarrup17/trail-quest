@@ -29,3 +29,12 @@ jobs:
       - name: Run Robot Tests
         run: |
           robot -d output tests/
+
+      - name: Upload Robot Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-reports
+          path: output/
+
+
