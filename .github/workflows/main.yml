@@ -1,61 +1,46 @@
-name: Robot Tests
+name: Trail Quest Robot CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   robot-tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      # Step 2: Set up Python
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
 
-      # Step 3: Install Python dependencies
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements
 
-      # Step 4: Install Google Chrome
-      - name: Install Google Chrome
-        uses: browser-actions/setup-chrome@v1
+    - name: Install Google Chrome
+      uses: browser-actions/setup-chrome@v1
 
-      # Step 5: Install ChromeDriver matching Chrome version
-      - name: Install ChromeDriver
-        shell: powershell
-        run: |
-          $chromeVersion = (& "C:\Program Files\Google\Chrome\Application\chrome.exe" --version) -replace 'Google Chrome ', ''
-          $chromeMajor = $chromeVersion.Split('.')[0]
-          Write-Host "Chrome major version: $chromeMajor"
-          $driverVersion = Invoke-RestMethod "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$chromeMajor"
-          Invoke-WebRequest "https://chromedriver.storage.googleapis.com/$driverVersion/chromedriver_win32.zip" -OutFile "chromedriver.zip"
-          Expand-Archive chromedriver.zip -DestinationPath "$Env:USERPROFILE\bin" -Force
-          $Env:PATH += ";$Env:USERPROFILE\bin"
-          chromedriver --version
+    - name: Verify Chrome installation
+      run: |
+        google-chrome --version
+        which google-chrome
 
-      # Step 6: Run Robot Framework tests
-      - name: Run Robot Framework Tests
-        env:
-          CHROME_BIN: "C:\Program Files\Google\Chrome\Application\chrome.exe"
-          PATH: ${{ env.PATH }};$Env:USERPROFILE\bin
-        run: |
-          robot --console verbose -d results tests/
+    - name: Run Robot Framework Tests
+      env:
+        CHROME_BIN: /usr/bin/google-chrome
+      run: |
+        robot --console verbose -d results tests/
 
-      # Step 7: Upload Robot Framework Results
-      - name: Upload Robot Framework Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-results
-          path: results/
+    - name: Upload Robot Framework Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-results
+        path: results/
