@@ -9,6 +9,7 @@ on:
 jobs:
   robot-tests:
     runs-on: windows-latest
+
     steps:
       # Step 1: Checkout code
       - uses: actions/checkout@v3
@@ -23,18 +24,49 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements
+          pip install -r requirements.txt
 
-      # Step 5: Run Robot tests
+      # Step 4: Run Robot tests
       - name: Run Robot Tests
         run: |
           robot -d output tests/
 
-      - name: Upload Robot Reports
+      # Step 5: Zip Robot output
+      - name: Zip Robot Reports
+        if: always()
+        run: |
+          powershell Compress-Archive -Path output -DestinationPath robot-reports.zip -Force
+
+      # Step 6: Upload ZIP as artifact (optional but recommended)
+      - name: Upload Robot Reports ZIP
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: robot-framework-reports
-          path: output/
+          path: robot-reports.zip
 
+      # Step 7: Send test report email with ZIP attachment
+      - name: Send test report email
+        if: always()
+        uses: Dawid6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Robot Tests - ${{ job.status }}"
+          from: "Robot CI <${{ secrets.EMAIL_USERNAME }}>"
+          to: swarupdahal17@gmail.com
+          body: |
+            Robot Framework test execution completed.
 
+            Status: ${{ job.status }}
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+
+            Download reports from GitHub:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            ZIP report attached.
+          attachments: robot-reports.zip
