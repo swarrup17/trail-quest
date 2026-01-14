@@ -48,7 +48,7 @@ jobs:
       # Step 7: Send test report email with ZIP attachment
       - name: Send test report email
         if: always()
-        uses: Dawid6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
