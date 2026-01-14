@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260114 11:53:20.039" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260114 13:56:21.594" rpa="false" schemaversion="4">
 <suite id="s1" name="Home Page Button" source="C:\Users\Swarup Dahal\PycharmProjects\trail-quest\tests\home_page_button.robot">
 <test id="s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
 <kw name="Open Homepage" library="home_page">
 <kw name="Open Browser To Application" library="browser">
+<doc>Opens browser with custom Chrome options and ensures navbar is visible</doc>
 <kw name="Evaluate" library="BuiltIn">
 <var>${chrome_options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>modules=selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 11:53:20.722" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020FB768AF90&gt;</msg>
-<status status="PASS" starttime="20260114 11:53:20.722" endtime="20260114 11:53:20.722"/>
+<msg timestamp="20260114 13:56:22.381" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000219892FAE40&gt;</msg>
+<status status="PASS" starttime="20260114 13:56:22.381" endtime="20260114 13:56:22.381"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${args}</var>
@@ -24,64 +25,226 @@
 <arg>--disable-extensions</arg>
 <arg>--disable-setuid-sandbox</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20260114 11:53:20.723" level="INFO">${args} = ['--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--disable-software-rasterizer', '--remote-debugging-port=9222', '--disable-extensions', '-...</msg>
-<status status="PASS" starttime="20260114 11:53:20.723" endtime="20260114 11:53:20.723"/>
+<msg timestamp="20260114 13:56:22.382" level="INFO">${args} = ['--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--disable-software-rasterizer', '--remote-debugging-port=9222', '--disable-extensions', '-...</msg>
+<status status="PASS" starttime="20260114 13:56:22.382" endtime="20260114 13:56:22.383"/>
 </kw>
-<status status="PASS" starttime="20260114 11:53:20.722" endtime="20260114 11:53:20.723"/>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}">--window-size=1920,1080</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.384" endtime="20260114 13:56:22.385"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.383" endtime="20260114 13:56:22.385"/>
+</iter>
+<iter>
+<var name="${arg}">--start-maximized</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.386" endtime="20260114 13:56:22.387"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.386" endtime="20260114 13:56:22.387"/>
+</iter>
+<iter>
+<var name="${arg}">--no-sandbox</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.387" endtime="20260114 13:56:22.387"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.387" endtime="20260114 13:56:22.387"/>
+</iter>
+<iter>
+<var name="${arg}">--disable-dev-shm-usage</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.388" endtime="20260114 13:56:22.388"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.387" endtime="20260114 13:56:22.388"/>
+</iter>
+<iter>
+<var name="${arg}">--disable-gpu</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.388" endtime="20260114 13:56:22.388"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.388" endtime="20260114 13:56:22.389"/>
+</iter>
+<iter>
+<var name="${arg}">--disable-software-rasterizer</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.389" endtime="20260114 13:56:22.389"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.389" endtime="20260114 13:56:22.389"/>
+</iter>
+<iter>
+<var name="${arg}">--remote-debugging-port=9222</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.390" endtime="20260114 13:56:22.390"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.389" endtime="20260114 13:56:22.390"/>
+</iter>
+<iter>
+<var name="${arg}">--disable-extensions</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.390" endtime="20260114 13:56:22.391"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.390" endtime="20260114 13:56:22.391"/>
+</iter>
+<iter>
+<var name="${arg}">--disable-setuid-sandbox</var>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260114 13:56:22.391" endtime="20260114 13:56:22.391"/>
+</kw>
+<status status="PASS" starttime="20260114 13:56:22.391" endtime="20260114 13:56:22.391"/>
+</iter>
+<status status="PASS" starttime="20260114 13:56:22.383" endtime="20260114 13:56:22.391"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260114 13:56:22.392" level="INFO">Opening browser 'Chrome' to base url 'https://trailquest.global/'.</msg>
+<status status="PASS" starttime="20260114 13:56:22.391" endtime="20260114 13:56:30.835"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${navbar_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${NAVBAR}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${NAVBAR}</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20260114 13:56:31.191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-81.png"&gt;&lt;img src="selenium-screenshot-81.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260114 13:56:31.192" level="FAIL">Element with locator 'xpath=//nav[contains(@class,'navbar')]' not found.</msg>
+<status status="FAIL" starttime="20260114 13:56:30.838" endtime="20260114 13:56:31.216"/>
+</kw>
+<msg timestamp="20260114 13:56:31.217" level="INFO">${navbar_present} = False</msg>
+<status status="PASS" starttime="20260114 13:56:30.836" endtime="20260114 13:56:31.217"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>not ${navbar_present}</arg>
+<arg>Click Element</arg>
+<arg>${MOBILE_MENU_BTN}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MOBILE_MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260114 13:56:31.222" level="INFO">Clicking element 'xpath=//button[contains(@class,'icon-menu')]'.</msg>
+<msg timestamp="20260114 13:56:31.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-82.png"&gt;&lt;img src="selenium-screenshot-82.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260114 13:56:31.589" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7334a88d5
+	0x7ff7334a8930
+	0x7ff733281465
+	0x7ff7332daf66
+	0x7ff7332cce7f
+	0x7ff733301fda
+	0x7ff7332cc746
+	0x7ff73332ac97
+	0x7ff7332cac29
+	0x7ff7332cba93
+	0x7ff7337c0620
+	0x7ff7337baf60
+	0x7ff7337d96c6
+	0x7ff7334c5dd4
+	0x7ff7334ced7c
+	0x7ff7334b1ff4
+	0x7ff7334b21a5
+	0x7ff733497ed2
+	0x7ffac5977374
+	0x7ffac621cc91
+</msg>
+<status status="FAIL" starttime="20260114 13:56:31.221" endtime="20260114 13:56:31.599"/>
+</kw>
+<status status="FAIL" starttime="20260114 13:56:31.217" endtime="20260114 13:56:31.600"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NAVBAR}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20260114 13:56:31.600" endtime="20260114 13:56:31.600"/>
+</kw>
+<status status="FAIL" starttime="20260114 13:56:22.380" endtime="20260114 13:56:31.601"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260114 11:53:22.724" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260114 11:53:20.723" endtime="20260114 11:53:22.724"/>
+<status status="NOT RUN" starttime="20260114 13:56:31.601" endtime="20260114 13:56:31.601"/>
 </kw>
-<status status="PASS" starttime="20260114 11:53:20.721" endtime="20260114 11:53:22.724"/>
+<status status="FAIL" starttime="20260114 13:56:22.380" endtime="20260114 13:56:31.601"/>
 </kw>
 <kw name="click all elements of homepage" library="home_page">
-<kw name="Verify Logo Is Visible" library="home_page">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${logo}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20260114 11:53:22.726" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20260114 11:53:22.726" level="FAIL">No browser is open.</msg>
-<status status="FAIL" starttime="20260114 11:53:22.725" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20260114 11:53:22.738" endtime="20260114 11:53:22.738"/>
-</kw>
-<status status="FAIL" starttime="20260114 11:53:22.725" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Click Home Menu" library="home_page">
-<status status="NOT RUN" starttime="20260114 11:53:22.738" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Open Trek And Tours Menu" library="home_page">
-<status status="NOT RUN" starttime="20260114 11:53:22.738" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Click About Menu" library="home_page">
-<status status="NOT RUN" starttime="20260114 11:53:22.738" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Click Contact Menu" library="home_page">
-<status status="NOT RUN" starttime="20260114 11:53:22.738" endtime="20260114 11:53:22.738"/>
-</kw>
-<kw name="Click FAQ Menu" library="home_page">
-<status status="NOT RUN" starttime="20260114 11:53:22.739" endtime="20260114 11:53:22.739"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath=/html/body/div[4]/div/section/div</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" starttime="20260114 11:53:22.739" endtime="20260114 11:53:22.739"/>
-</kw>
-<status status="FAIL" starttime="20260114 11:53:22.725" endtime="20260114 11:53:22.739"/>
+<status status="NOT RUN" starttime="20260114 13:56:31.603" endtime="20260114 13:56:31.603"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 11:53:22.739" endtime="20260114 11:53:22.740"/>
+<status status="PASS" starttime="20260114 13:56:31.604" endtime="20260114 13:56:34.012"/>
 </kw>
-<status status="FAIL" starttime="20260114 11:53:20.720" endtime="20260114 11:53:22.740">No browser is open.</status>
+<status status="FAIL" starttime="20260114 13:56:22.379" endtime="20260114 13:56:34.012">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7334a88d5
+	0x7ff7334a8930
+	0x7ff733281465
+	0x7ff7332daf66
+	0x7ff7332cce7f
+	0x7ff733301fda
+	0x7ff7332cc746
+	0x7ff73332ac97
+	0x7ff7332cac29
+	0x7ff7332cba93
+	0x7ff7337c0620
+	0x7ff7337baf60
+	0x7ff7337d96c6
+	0x7ff7334c5dd4
+	0x7ff7334ced7c
+	0x7ff7334b1ff4
+	0x7ff7334b21a5
+	0x7ff733497ed2
+	0x7ffac5977374
+	0x7ffac621cc91
+</status>
 </test>
-<status status="FAIL" starttime="20260114 11:53:20.041" endtime="20260114 11:53:22.741"/>
+<status status="FAIL" starttime="20260114 13:56:21.596" endtime="20260114 13:56:34.015"/>
 </suite>
 <statistics>
 <total>
@@ -94,6 +257,5 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20260114 11:53:20.700" level="ERROR">Error in file 'C:\Users\Swarup Dahal\PycharmProjects\trail-quest\resources\common\browser.robot' on line 25: Creating keyword 'END' failed: User keyword cannot be empty.</msg>
 </errors>
 </robot>
