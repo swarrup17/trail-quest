@@ -57,7 +57,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Robot Tests - ${{ job.status }}"
           from: "Robot CI <${{ secrets.EMAIL_USERNAME }}>"
-          to: swarupdahal17@gmail.com
+          to: swarupdahal17@gmail.com,swarup.zaki17@gmail.com
           body: |
             Robot Framework test execution completed.
 
