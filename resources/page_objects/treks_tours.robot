@@ -55,6 +55,7 @@ Test The Push Your Limit
     Click Easy
     Click Everest Picture
     Click All Sticky Navbar Links
+    Wait And Click    ${need_help}
 Test Facebook
     Verify Logo Is Visible
     Open Trek And Tours Menu

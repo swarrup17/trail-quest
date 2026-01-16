@@ -18,7 +18,7 @@ ${push_your_limit}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[
 ${reconnect_with_nature}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[3]/a
 ${declutter_your_mind}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[4]/a
 ${explore_the_ancients}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[5]/a
-
+${need_help}    xpath=/html/body/div[3]/nav/div/div/div/a
 #push your limit buttons
 ${header}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]
 ${easy}    xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3
