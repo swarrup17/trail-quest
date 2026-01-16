@@ -55,6 +55,38 @@ Test The Push Your Limit
     Click Easy
     Click Everest Picture
     Click All Sticky Navbar Links
+Test Facebook
+    Verify Logo Is Visible
+    Open Trek And Tours Menu
+    Click Push Your Limit
+    Go Down To
+    Click Easy
+    Click Everest Picture
+    Wait And Click    ${share}
+    sleep    2s
+    Wait Until Element Is Visible    ${facebook}
+    Sleep    1s
+    Wait And Click    ${facebook}
+    Sleep    2s
+    Capture Page Screenshot
+Test Twitter
+    Verify Logo Is Visible
+    Open Trek And Tours Menu
+    Click Push Your Limit
+    Go Down To
+    Click Easy
+    Click Everest Picture
+    Wait And Click    ${share}
+    Sleep    2s
+    Wait Until Element Is Visible    ${twitter}
+    Sleep    1s
+    Wait And Click    ${twitter}
+    Sleep    2s
+    Capture Page Screenshot
+
+
+    
+    
 
 
 

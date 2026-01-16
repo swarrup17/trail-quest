@@ -9,7 +9,8 @@ ${Login}    xpath=/html/body/div[1]/header/div[2]/div[1]/div/div[2]/div/ul/div[1
 ${search_box}    xpath=/html/body/div[3]/section[1]/div[2]/div/div/div[2]/div/form/div/div/div[1]/div/input
 ${search_button}    xpath=/html/body/div[3]/section[1]/div[2]/div/div/div[2]/div/form/div/div/div[2]/div/button/i
 ${quiz}    xpath=//*[@id="openQuizModal"]
-
+${HANDLES}=    Get Window Handles
+${MAIN_WIN}=    Set Variable    ${HANDLES}[0]
 
 #Treks And Tours buttons
 ${trek_and_tours}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i
@@ -45,3 +46,6 @@ ${e_faq}    xpath=/html/body/div[3]/nav/div/div/ul/li[9]/a
 ${into_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[1]/div/div/p[3]/span/span
 ${kbyg_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[2]/div/div[2]
 ${high_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[3]/div/div[2]/div/div[2]/div
+${share}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]
+${facebook}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[1]
+${twitter}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[2]

@@ -9,6 +9,12 @@ Test Teardown    Close Browser
 Treks and Tours Test
     Open Homepage
     Test The Push Your Limit
+Facebook Button
+    Open Homepage
+    Test Facebook
+Twitter Button
+    Open Homepage
+    Test Twitter
 
 
 

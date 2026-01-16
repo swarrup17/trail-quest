@@ -11,7 +11,6 @@ ${NAVBAR}           xpath=//nav[contains(@class,'navbar')]   # replace with actu
 
 *** Keywords ***
 Open Browser To Application
-    [Documentation]    Opens browser with custom Chrome options and ensures navbar is visible
     ${chrome_options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium.webdriver
     ${args}=    Create List
     ...    --window-size=1920,1080
@@ -29,12 +28,6 @@ Open Browser To Application
     END
 
     Open Browser    ${BASE_URL}    ${BROWSER}    options=${chrome_options}
-
-    # -------- Ensure navbar is visible (handle mobile vs desktop) --------
-    ${navbar_present}=    Run Keyword And Return Status    Element Should Be Visible    ${NAVBAR}    timeout=2s
-    Run Keyword If    not ${navbar_present}    Click Element    ${MOBILE_MENU_BTN}
-    Wait Until Element Is Visible    ${NAVBAR}    timeout=5s
-
 Close Browser Session
     [Documentation]    Closes the current browser session
     Close Browser
