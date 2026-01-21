@@ -25,7 +25,7 @@ ${easy}    xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3
 ${moderate}    xpath=/html/body/div[3]/section/div/div/ul/li[2]/h3
 ${challenging}    xpath=/html/body/div[3]/section/div/div/ul/li[3]/h3
 #Easy-Everest 3 passes trek
-${everest_picture}    xpath=//img[contains(@alt,'Everest 3 Passes Trek')]
+${everest_picture}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[1]
 ${everest_content}    xpath=//span[contains(text(),'Everest 3 Passes Trek')]
 ${everest_favorite}    xpath=//button[.//i[contains(@class,'icon-heart')]]
 ${everest_cart}    xpath=//button[@type='submit' and .//i[contains(@class,'fa-cart-shopping')]]
@@ -46,11 +46,25 @@ ${e_faq}    xpath=/html/body/div[3]/nav/div/div/ul/li[9]/a
 ${into_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[1]/div/div/p[3]/span/span
 ${kbyg_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[2]/div/div[2]
 ${high_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[3]/div/div[2]/div/div[2]/div
-${share}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]
+${share}    xpath=//*[@id="dropdownMenuShare"]
 ${facebook}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[1]
 ${twitter}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[2]
 #Kanchenjunga
-${kanchenjunga_image}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[2]/div/div[1]/div/a/div/img
+${kanchenjunga_image}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[2]
 ${kan_fav}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/button
-${kan_ele}    xpath=/html/body/div[3]/div[1]/section[2]
+
 ${kan_nav}    xpath=/html/body/div[3]/nav
+${kan_ele}    xpath=/html/body/div[3]/div[1]/section[2]
+${kan_header}    xpath=/html/body/div[3]/nav
+
+#Everest Via Gokyo
+${eve_go_but}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[3]
+${gokyo_element}    xpath=/html/body/div[3]/div[1]/section[2]
+${gokyo_header}    xpath=/html/body/div[3]/nav
+
+#moderate
+${moderate}    xpath=/html/body/div[3]/section/div/div/ul/li[2]
+#annapurna circuit trek
+@{annapurna_circuit}    xpath=
+
+

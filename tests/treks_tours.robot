@@ -9,6 +9,10 @@ Test Teardown    Close Browser
 Treks and Tours Test
     Open Homepage
     Test The Push Your Limit
+    Test KanchenjungaTrek
+    Test Everest Via Gokyo_Trek
+    Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div/a/img[1]
+    
 #Facebook Button
 #    Open Homepage
 #    Test Facebook
