@@ -49,3 +49,8 @@ ${high_vis}    xpath=xpath=/html/body/div[3]/section[1]/div/div/div[1]/div[3]/di
 ${share}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]
 ${facebook}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[1]
 ${twitter}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[2]/div/div[1]/div/div/a[2]
+#Kanchenjunga
+${kanchenjunga_image}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[2]/div/div[1]/div/a/div/img
+${kan_fav}    xpath=/html/body/div[3]/section/div/div/div[3]/section/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/button
+${kan_ele}    xpath=/html/body/div[3]/div[1]/section[2]
+${kan_nav}    xpath=/html/body/div[3]/nav

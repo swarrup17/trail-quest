@@ -28,7 +28,7 @@ Click Everest Picture
 #    Wait And Click    ${highlights}
 #    Scroll Element Into View    ${nav_bar}
 #    Wait And Click    ${who_for}
-Click All Sticky Navbar Links
+Click All Everest Sticky Navbar Links
     Scroll Element Into View    ${nav_bar}
     ${section}=    Get WebElement    xpath=//*[@data-section='nav-intro']
     ${nav_links}=    Get WebElements    xpath=//nav[contains(@class,'sticky-navbar')][1]//ul/li/a[contains(@class,'nav-link')]
@@ -47,6 +47,19 @@ Click All Sticky Navbar Links
         Capture Page Screenshot
     END
 
+Click All Days of Itinerary
+    ${accordion_items}=    Get WebElements    xpath=//div[contains(@class,'accordion__item')]
+
+    FOR    ${item}    IN    @{accordion_items}
+        ${status}    ${day_number}=    Run Keyword And Ignore Error
+        ...    Get Text    xpath=.//span
+        ${day_number}=    Run Keyword If    '${status}'=='FAIL'    Set Variable    Unknown Day
+
+        Log    Expanding itinerary Day: ${day_number}
+
+        Run Keyword And Ignore Error    Click Element    xpath=.//div[contains(@class,'accordion__button')]
+        Run Keyword And Ignore Error    Wait Until Element Is Visible    xpath=.//div[contains(@class,'accordion__content')]    timeout=5s
+    END
 Test The Push Your Limit
     Verify Logo Is Visible
     Open Trek And Tours Menu
@@ -54,8 +67,8 @@ Test The Push Your Limit
     Go Down To
     Click Easy
     Click Everest Picture
-    Click All Sticky Navbar Links
-    Wait And Click    ${need_help}
+    Click All Everest Sticky Navbar Links
+    Click All Days Of Itinerary
 Test Facebook
     Verify Logo Is Visible
     Open Trek And Tours Menu
