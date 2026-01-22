@@ -24,7 +24,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements
 
       # Step 4: Install Chrome & ChromeDriver
       - name: Install Chrome and ChromeDriver
