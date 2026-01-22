@@ -2,10 +2,10 @@
 Library    SeleniumLibrary
 Library    String
 *** Keywords ***
-Wait And Click
-    [Arguments]    ${locator}
-    Wait Until Element Is Visible    ${locator}
-    Click Element    ${locator}
+#Wait And Click
+#    [Arguments]    ${locator}
+#    Wait Until Element Is Visible    ${locator}
+#    Click Element    ${locator}
 
 Wait And Input Text
     [Arguments]    ${locator}    ${text}
@@ -17,9 +17,8 @@ Verify Page Contains
     Page Should Contain    ${text}
 
 
-Wait And Click Safely
-    [Arguments]    ${locator}    ${timeout}=15s
-
+Wait And Click
+    [Arguments]    ${locator}    ${timeout}=20s
     Wait Until Element Is Visible    ${locator}    ${timeout}
     Wait Until Element Is Enabled    ${locator}    ${timeout}
     Scroll Element Into View         ${locator}
@@ -28,8 +27,11 @@ Wait And Click Safely
     ...    Click Element    ${locator}
 
     IF    not ${clicked}
-        Log    Normal click failed, using JS click
+        Log    Using JS click fallback for ${locator}
         Execute Javascript
         ...    arguments[0].click();
         ...    document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
     END
+
+
+

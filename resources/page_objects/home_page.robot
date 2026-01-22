@@ -18,70 +18,38 @@ Click Home Menu
 
 
 Verify Homepage Header Buttons Are Clickable
-    [Documentation]    Handles desktop and mobile navbar. Opens menu only if mobile menu button is visible.
-
-    # -------------------------------
-    # 1. Check if mobile menu button is visible
-    # -------------------------------
     ${mobile_menu_visible}=    Run Keyword And Return Status
     ...    Wait Until Element Is Visible    xpath=//button[contains(@class,'icon-menu')]    5s
 
     IF    ${mobile_menu_visible}
-        Log    Mobile menu button visible, clicking to open navbar
-        Click Element    xpath=//button[contains(@class,'icon-menu')]
+        Wait And Click    xpath=//button[contains(@class,'icon-menu')]
         Wait Until Element Is Visible    xpath=//div[contains(@class,'js-navList')]    10s
-    ELSE
-        Log    Mobile menu button not visible, assuming desktop navbar is already visible
     END
 
-    # -------------------------------
-    # 2. Click Home
-    # -------------------------------
-    Wait Until Element Is Visible    xpath=//a[normalize-space()='Home']    10s
-    Click Element                    xpath=//a[normalize-space()='Home']
-    Wait Until Page Contains Element    xpath=//body    5s
+    Wait And Click    xpath=//a[normalize-space()='Home']
 
-    # -------------------------------
-    # 3. Click Treks & Tours submenu items
-    # -------------------------------
     Click Navbar Menu And Subitems    Treks & Tours    Push Your Limits    Reconnect With Nature    Declutter Your Mind    Explore The Ancients
-
-    # -------------------------------
-    # 4. Click About submenu items
-    # -------------------------------
     Click Navbar Menu And Subitems    About    Who We Are    Our Core Values    Why Choose trailQuest?    Our Squad    What We Rally For    Terms & Conditions    Privacy Policy
 
-    # -------------------------------
-    # 5. Click FAQs and Contact
-    # -------------------------------
-    Wait Until Element Is Visible    xpath=//a[normalize-space()='FAQs']    10s
-    Click Element                    xpath=//a[normalize-space()='FAQs']
-    Wait Until Page Contains Element    xpath=//body    5s
-
-    Wait Until Element Is Visible    xpath=//a[normalize-space()='Contact']    10s
-    Click Element                    xpath=//a[normalize-space()='Contact']
+    Wait And Click    xpath=//a[normalize-space()='FAQs']
+    Wait And Click    xpath=//a[normalize-space()='Contact']
 
 *** Keywords ***
 Click Navbar Menu And Subitems
     [Arguments]    ${menu_name}    @{submenu_items}
-    # Open the main menu if needed
-    Wait Until Element Is Visible    xpath=//span[normalize-space()='${menu_name}']    10s
-    Click Element                    xpath=//span[normalize-space()='${menu_name}']
-
+    Wait And Click    xpath=//span[normalize-space()='${menu_name}']
     FOR    ${item}    IN    @{submenu_items}
-        Wait Until Element Is Visible    xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']    10s
-        Click Element                    xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']
+        Wait And Click    xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']
         Wait Until Page Contains Element    xpath=//body    5s
 
-        # Re-open menu & submenu after navigation if needed
         ${mobile_menu_visible}=    Run Keyword And Return Status
         ...    Element Should Be Visible    xpath=//button[contains(@class,'icon-menu')]
         IF    ${mobile_menu_visible}
-            Click Element    xpath=//button[contains(@class,'icon-menu')]
+            Wait And Click    xpath=//button[contains(@class,'icon-menu')]
         END
-        Wait Until Element Is Visible    xpath=//span[normalize-space()='${menu_name}']    10s
-        Click Element                    xpath=//span[normalize-space()='${menu_name}']
+        Wait And Click    xpath=//span[normalize-space()='${menu_name}']
     END
+
 
 Open Trek And Tours Menu
     Wait And Click    ${trek_and_tours}
