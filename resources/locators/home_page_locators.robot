@@ -11,6 +11,7 @@ ${search_button}    xpath=/html/body/div[3]/section[1]/div[2]/div/div/div[2]/div
 ${quiz}    xpath=//*[@id="openQuizModal"]
 ${HANDLES}=    Get Window Handles
 ${MAIN_WIN}=    Set Variable    ${HANDLES}[0]
+${home_nav}    xpath=/html/body/div[1]/header/div[2]/div[2]/div[2]/button
 
 #Treks And Tours buttons
 ${trek_and_tours}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i
