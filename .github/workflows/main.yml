@@ -30,7 +30,7 @@ jobs:
       - name: Install Chrome and ChromeDriver
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip xvfb libxi6 libnss3 fonts-liberation libappindicator3-1 libatk1.0-0 libcups2 libxss1 libxrandr2 libasound2 libgtk-3-0
+          sudo apt-get install -y wget unzip xvfb libxi6 libnss3 fonts-liberation libappindicator3-1 libatk1.0-0 libcups2 libxss1 libxrandr2 libgtk-3-0
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt install -y ./google-chrome-stable_current_amd64.deb
           CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
@@ -44,7 +44,7 @@ jobs:
         run: |
           robot -d output tests/
 
-      # 6️⃣ Zip Robot output (Linux)
+      # 6️⃣ Zip Robot output
       - name: Zip Robot Reports
         if: always()
         run: |

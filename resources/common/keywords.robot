@@ -1,12 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-*** Keywords ***
-#Wait And Click
-#    [Arguments]    ${locator}
-#    Wait Until Element Is Visible    ${locator}
-#    Click Element    ${locator}
 
+*** Keywords ***
 Wait And Input Text
     [Arguments]    ${locator}    ${text}
     Wait Until Element Is Visible    ${locator}
@@ -16,9 +12,9 @@ Verify Page Contains
     [Arguments]    ${text}
     Page Should Contain    ${text}
 
-
 Wait And Click
     [Arguments]    ${locator}    ${timeout}=20s
+    [Documentation]    Waits until element is visible & enabled, scrolls into view, clicks, fallback to JS if normal click fails
     Wait Until Element Is Visible    ${locator}    ${timeout}
     Wait Until Element Is Enabled    ${locator}    ${timeout}
     Scroll Element Into View         ${locator}
@@ -32,6 +28,3 @@ Wait And Click
         ...    arguments[0].click();
         ...    document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
     END
-
-
-
