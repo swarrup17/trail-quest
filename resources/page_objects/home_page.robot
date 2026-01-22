@@ -34,7 +34,7 @@ Verify Homepage Header Buttons Are Clickable
     Wait And Click    xpath=//a[normalize-space()='FAQs']
     Wait And Click    xpath=//a[normalize-space()='Contact']
 
-*** Keywords ***
+
 Click Navbar Menu And Subitems
     [Arguments]    ${menu_name}    @{submenu_items}
     Wait And Click    xpath=//span[normalize-space()='${menu_name}']

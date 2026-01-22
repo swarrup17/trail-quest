@@ -65,7 +65,10 @@ ${gokyo_header}    xpath=/html/body/div[3]/nav
 
 #moderate
 ${moderate}    xpath=/html/body/div[3]/section/div/div/ul/li[2]
-#annapurna circuit trek
-@{annapurna_circuit}    xpath=
-
-
+${annapurna_circuit}    xpath=/html/body/div[3]/section/div/div/div[4]/section/div/div/div/div[2]/div[1]/div
+${manaslu_circuit}    xpath=/html/body/div[3]/section/div/div/div[4]/section/div/div/div/div[2]/div[2]
+${manaslu_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
+${Annapurna_base_camp}    xpath=//*[@id="tab-moderate"]/section/div/div/div/div[2]/div[3]
+${Annapurna_base_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
+${Everest_base_camp}    xpath=//*[@id="tab-moderate"]/section/div/div/div/div[2]/div[4]
+${EBC_CONTENT}    xpath=

@@ -12,7 +12,12 @@ Treks and Tours Test
     Test KanchenjungaTrek
     Test Everest Via Gokyo_Trek
     Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div/a/img[1]
-    
+    Test Annapurna Circuit Trek
+    Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div
+    Test Manaslu Circuit Trek
+    Test Annapurna Base Camp
+    #Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]
+    Test Everest Base Camp
 #Facebook Button
 #    Open Homepage
 #    Test Facebook
