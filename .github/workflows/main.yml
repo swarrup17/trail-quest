@@ -11,26 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # 1️⃣ Checkout code
       - uses: actions/checkout@v3
 
-      # Step 2: Set up Python
+      # 2️⃣ Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # Step 3: Install dependencies
-      - name: Install Python dependencies
+      # 3️⃣ Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements
 
-      # Step 4: Install Chrome & ChromeDriver
+      # 4️⃣ Install Chrome + ChromeDriver
       - name: Install Chrome and ChromeDriver
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip xvfb libxi6 libgconf-2-4
+          sudo apt-get install -y wget unzip xvfb libxi6 libnss3 fonts-liberation libappindicator3-1 libatk1.0-0 libcups2 libxss1 libxrandr2 libasound2 libgtk-3-0
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt install -y ./google-chrome-stable_current_amd64.deb
           CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
@@ -39,18 +39,18 @@ jobs:
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/
 
-      # Step 5: Run Robot tests
+      # 5️⃣ Run Robot Tests
       - name: Run Robot Tests
         run: |
           robot -d output tests/
 
-      # Step 6: Zip Robot output (Linux compatible)
+      # 6️⃣ Zip Robot output (Linux)
       - name: Zip Robot Reports
         if: always()
         run: |
           zip -r robot-reports.zip output
 
-      # Step 7: Upload ZIP as artifact
+      # 7️⃣ Upload ZIP artifact
       - name: Upload Robot Reports ZIP
         if: always()
         uses: actions/upload-artifact@v4
@@ -58,7 +58,7 @@ jobs:
           name: robot-framework-reports
           path: robot-reports.zip
 
-      # Step 8: Send test report email with ZIP attachment
+      # 8️⃣ Send test report email
       - name: Send test report email
         if: always()
         uses: dawidd6/action-send-mail@v3
