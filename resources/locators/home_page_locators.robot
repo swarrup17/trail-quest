@@ -105,4 +105,11 @@ ${Declutter_content}    xpath=/html/body/section[1]/div
 ${Indoor_Retreats}    xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3
 ${The_Annapurna_Reset}    xpath=//*[@id="tab-indoor-retreats"]/section/div/div/div/div[2]/div[1]
 ${The_Annapurna_Content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
+${The_mardi_path}    xpath=//*[@id="tab-indoor-retreats"]/section/div/div/div/div[2]/div[2]
+${The_mardi_path_content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]
+${The_khopra_reset}    xpath=//*[@id="tab-indoor-retreats"]/section/div/div/div/div[2]/div[2]
+${The_khopra_reset_content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]
+${Outdoor_Retreats}    xpath=/html/body/div[3]/section/div/div/ul/li[2]
+${The_Ghandruk_Reset}    xpath=//*[@id="tab-outdoor-retreats"]/section/div/div/div/div[2]/div
+${The_Ghandruk_Reset_Contents}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
 

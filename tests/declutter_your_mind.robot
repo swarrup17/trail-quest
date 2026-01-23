@@ -11,3 +11,7 @@ Declutter Your Mind Test
     Verify Logo Is Visible
     Open Trek And Tours Menu
     Test The Annapurna Reset
+    Test The Mardi Path
+    Test The Khopra Reset
+    Test Ghandruk Reset
+
