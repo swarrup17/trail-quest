@@ -113,3 +113,13 @@ ${Outdoor_Retreats}    xpath=/html/body/div[3]/section/div/div/ul/li[2]
 ${The_Ghandruk_Reset}    xpath=//*[@id="tab-outdoor-retreats"]/section/div/div/div/div[2]/div
 ${The_Ghandruk_Reset_Contents}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
 
+#EXPLORE THE ANCIENT
+${explore_the_ancient}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[5]/a
+${explore_the_ancient_content}    xpath=/html/body/section[1]/div
+${off_the_beaten}    xpath=/html/body/div[3]/section/div/div/ul/li[1]
+${forgotten_culture}    xpath=/html/body/div[3]/section/div/div/ul/li[2]/h3
+${Muktinath}    xpath=/html/body/div[3]/section/div/div/div[4]/section/div/div/div/div[2]/div[1]
+${Muktinath_Content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[2]/div/div
+${KPL}    xpath=//*[@id="tab-forgotten-cultures"]/section/div/div/div/div[2]/div[2]
+${KPL_Content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[2]/div/div
+

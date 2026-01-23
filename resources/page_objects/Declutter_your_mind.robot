@@ -11,7 +11,7 @@ Click Declutter Your Mind
     Wait And Click    ${Declutter_your_mind}
     Sleep    2s
 #Indoor Retreats
-Test Indoor Retrests
+Test Indoor Retreats
     Click Declutter Your Mind
     Wait Until Element Is Visible    ${Declutter_content}
     Go Down To
@@ -46,7 +46,7 @@ Test The Annapurna Reset Navbar
         END
     END
 Test The Annapurna Reset
-    Test Indoor Retrests
+    Test Indoor Retreats
     Wait And Click    ${The_Annapurna_Reset}
     Wait Until Element Is Visible    ${The_Annapurna_Content}
     Scroll Element Into View    xpath=/html/body/div[3]/div/nav
@@ -89,7 +89,7 @@ Test The Mardi Path Navbar
     END
 Test The Mardi Path
     Open Trek And Tours Menu
-    Test Indoor Retrests
+    Test Indoor Retreats
     Wait And Click    ${The_mardi_path}
     Wait Until Element Is Visible    ${The_mardi_path_content}
     Scroll Element Into View    xpath=/html/body/div[3]/nav
@@ -133,7 +133,7 @@ Test The Khopra Reset Navbar
 
 Test The Khopra Reset
     Open Trek And Tours Menu
-    Test Indoor Retrests
+    Test Indoor Retreats
     Wait And Click    ${The_khopra_reset}
     Wait Until Element Is Visible    ${The_khopra_reset_content}
     Scroll Element Into View    xpath=/html/body/div[3]/nav
