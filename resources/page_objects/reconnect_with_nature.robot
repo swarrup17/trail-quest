@@ -21,7 +21,7 @@ Test Reconnect With Nature
     Wait Until Element Is Visible    ${Soulful_Returns_contents}
     Sleep    1.5s
 Test Nepal Unbound Heritage to the pulse of wild Navbar
-        [Documentation]    Click all sticky navbar section links (Intro → FAQS)
+   [Documentation]    Click all sticky navbar section links (Intro → FAQS)
 
     ${NAVBAR}     Set Variable    //nav[contains(@class,'sticky-navbar')]
     ${NAV_LINKS}  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul/li/a[contains(@class,'nav-link')]
@@ -63,7 +63,7 @@ Test Nepal Unbound Heritage to the pulse of wild
     Scroll Element Into View   ${Nepal_Unbound_Heritage_Content}
 
 Test The Valley Tales Navbar
-        [Documentation]    Click all sticky navbar section links safely
+    [Documentation]    Click all sticky navbar section links safely
 
     ${STICKY_NAVBAR}    Set Variable    //nav[contains(@class,'sticky-navbar')]
     ${STICKY_LINKS}     Set Variable    //nav[contains(@class,'sticky-navbar')]//ul/li/a[contains(@class,'nav-link')]

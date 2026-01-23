@@ -99,5 +99,10 @@ ${Nepal_tales_content}    xpath=/html/body/div[3]/div[1]/section[2]
 ${Kalinchwok_crest}    xpath=//*[@id="tab-soulful-returns"]/section/div/div/div/div[2]/div[4]
 ${Kalinchwok_crest_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
 
-
+#DECLUTTER YOUR MIND
+${Declutter_your_mind}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[4]/a
+${Declutter_content}    xpath=/html/body/section[1]/div
+${Indoor_Retreats}    xpath=/html/body/div[3]/section/div/div/ul/li[1]/h3
+${The_Annapurna_Reset}    xpath=//*[@id="tab-indoor-retreats"]/section/div/div/div/div[2]/div[1]
+${The_Annapurna_Content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
 

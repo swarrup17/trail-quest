@@ -532,7 +532,7 @@ Test Langtang
     Click All langtang Sticky Navbar Sections
     Scroll Element Into View    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
 Click All Poon Hill Navbar
-        [Documentation]    Click all section links inside sticky navbar <ul> safely
+    [Documentation]    Click all section links inside sticky navbar <ul> safely
 
     # Use pure XPath (Robot adds xpath= automatically)
     ${NAVBAR}      Set Variable    //nav[contains(@class,'sticky-navbar')]
@@ -580,7 +580,7 @@ Test Poon Hill
     Click All Poon Hill Navbar
     Scroll Element Into View    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
 Click All Amayangri Navbar
-        [Documentation]    Clicks all <a class="nav-link"> inside sticky navbar <ul>
+     [Documentation]    Clicks all <a class="nav-link"> inside sticky navbar <ul>
 
     ${NAVBAR}     Set Variable    //nav[contains(@class,'sticky-navbar')]
     ${NAV_LINKS}  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul/li/a[contains(@class,'nav-link')]

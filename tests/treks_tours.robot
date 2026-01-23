@@ -22,7 +22,7 @@ Treks and Tours Test
     Test Mardi
     Test Langtang
     Test Poon Hill
-    Test
+    Test Amayangri
 
 
 #Facebook Button
