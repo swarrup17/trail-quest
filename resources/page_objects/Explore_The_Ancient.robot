@@ -62,7 +62,7 @@ Test Muktinath Tours
     Test Forgotten Culture
     Scroll Element Into View    xpath=/html/body/div[3]/section/div/div/div[4]/section/div/div/div/div[2]
     Wait And Click    ${Muktinath}
-    Wait Until Element Is Visible    ${Muktunath_Content}
+    Wait Until Element Is Visible    ${Muktinath_Content}
     Scroll Element Into View    xpath=/html/body/div[3]/nav
     Test Muktinath Tours Navbar
     Scroll Element Into View    ${Muktinath_Content}
