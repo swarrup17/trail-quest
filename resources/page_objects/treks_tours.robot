@@ -378,25 +378,25 @@ Test Annapurna Base Camp
     Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div
 
 
-Click All Everest Base Camp Sticky Navbar Link
-    [Documentation]    Scrolls to ABC sticky navbar <ul> and clicks all section links safely (CI + desktop)
+Click All Everest Base Camp Sticky Navbar Sections
+    [Documentation]    Scrolls to EBC sticky navbar <ul> and clicks all section links safely (CI + desktop)
 
-    ${NAV_UL}=      Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]//ul
-    ${NAV_LINKS}=   Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
+    ${NAVBAR}=     Set Variable    //nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
 
-    # Ensure sticky navbar UL is present
-    Wait Until Element Is Visible    ${NAV_UL}    15s
-    Scroll Element Into View         ${NAV_UL}
+    # Ensure sticky navbar is present
+    Wait Until Element Is Visible    xpath=${NAVBAR}    15s
+    Scroll Element Into View         xpath=${NAVBAR}
     Sleep    0.5s
 
-    # Collect all section links (Intro → FAQS)
-    ${links}=    Get WebElements    ${NAV_LINKS}
+    # Get all sticky nav links
+    ${links}=    Get WebElements    xpath=${NAV_LINKS}
     ${count}=    Get Length         ${links}
-    Log    Found ${count} ABC sticky navbar links
+    Log    Found ${count} EBC sticky navbar links
 
     FOR    ${index}    IN RANGE    ${count}
-        # Re-fetch to avoid stale element issues
-        ${links}=    Get WebElements    ${NAV_LINKS}
+        # Re-fetch links to avoid stale element issues
+        ${links}=    Get WebElements    xpath=${NAV_LINKS}
         ${link}=     Set Variable       ${links}[${index}]
 
         ${text}=     Get Text    ${link}
@@ -405,14 +405,11 @@ Click All Everest Base Camp Sticky Navbar Link
         Scroll Element Into View    ${link}
         Sleep    0.4s
 
-        # Explicit waits (important for CI)
         Wait Until Element Is Visible    ${link}    10s
         Wait Until Element Is Enabled    ${link}    10s
 
-        # Normal click attempt
         ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
 
-        # JS fallback for headless / CI failures
         IF    not ${clicked}
             Log    JS click fallback for: ${text}
             Execute Javascript    arguments[0].click();    ${link}
@@ -422,18 +419,213 @@ Click All Everest Base Camp Sticky Navbar Link
         Run Keyword And Ignore Error    Capture Page Screenshot
     END
 
+
 Test Everest Base Camp
     Click Moderate
     Wait And Click    ${Everest_base_camp}
     Wait Until Element Is Visible    ${EBC_content}
-    Click All Everest Base Camp Sticky Navbar Link
+    Click All Everest Base Camp Sticky Navbar Sections
 
+#CHALLENGING
+Click Challenging
+    Open Trek And Tours Menu
+    Click Push Your Limit
+    Go Down To
+    Wait And Click    ${challenging}
 
+Click All Mardi Sticky Navbar Sections
+    [Documentation]    Clicks all section links inside sticky navbar <ul> (Intro → FAQS), CI + desktop safe
 
+    # IMPORTANT: pure XPath only (no xpath= nesting)
+    ${NAVBAR}=     Set Variable    //nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
 
+    # Ensure sticky navbar is visible
+    Wait Until Element Is Visible    xpath=${NAVBAR}    15s
+    Scroll Element Into View         xpath=${NAVBAR}
+    Sleep    0.5s
 
+    # Collect nav links
+    ${links}=    Get WebElements    xpath=${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar links
 
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch elements to avoid stale reference
+        ${links}=    Get WebElements    xpath=${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
 
+        ${text}=     Get Text    ${link}
+        Log    Clicking sticky navbar link: ${text}
+
+        Scroll Element Into View    ${link}
+        Sleep    0.4s
+
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+
+        # JS fallback (headless / CI)
+        IF    not ${clicked}
+            Log    JS click fallback for: ${text}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.8s
+        Run Keyword And Ignore Error    Capture Page Screenshot
+    END
+Test Mardi
+    Click Challenging
+    Wait And Click    ${mardi}
+    Wait Until Element Is Visible    ${mardi_content}
+    Click All Mardi Sticky Navbar Sections
+    Scroll Element Into View    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
+
+Click All langtang Sticky Navbar Sections
+    [Documentation]    Clicks all section links inside sticky navbar <ul> (Intro → FAQS), CI + desktop safe
+
+    ${NAVBAR}=     Set Variable    //nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
+
+    # Ensure sticky navbar is visible
+    Wait Until Element Is Visible    xpath=${NAVBAR}    15s
+    Scroll Element Into View         xpath=${NAVBAR}
+    Sleep    0.5s
+
+    # Collect all section links
+    ${links}=    Get WebElements    xpath=${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar section links
+
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch to avoid stale element reference
+        ${links}=    Get WebElements    xpath=${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
+
+        ${text}=     Get Text    ${link}
+        Log    Clicking section: ${text}
+
+        Scroll Element Into View    ${link}
+        Sleep    0.4s
+
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+
+        # JS fallback (headless / CI)
+        IF    not ${clicked}
+            Log    JS click fallback for: ${text}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.8s
+        Run Keyword And Ignore Error    Capture Page Screenshot
+    END
+
+Test Langtang
+    Click Challenging
+    Wait And Click   ${langtang}
+    Wait Until Element Is Visible    ${langtang_content}
+    Scroll Element Into View    xpath=/html/body/div[3]/nav
+    Click All langtang Sticky Navbar Sections
+    Scroll Element Into View    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
+Click All Poon Hill Navbar
+        [Documentation]    Click all section links inside sticky navbar <ul> safely
+
+    # Use pure XPath (Robot adds xpath= automatically)
+    ${NAVBAR}      Set Variable    //nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}   Set Variable    //nav[contains(@class,'sticky-navbar')]//ul/li/a[contains(@class,'nav-link')]
+
+    # Wait for navbar
+    Wait Until Element Is Visible    ${NAVBAR}    15s
+    Scroll Element Into View         ${NAVBAR}
+    Sleep    0.5s
+
+    # Get all nav links
+    ${links}=    Get WebElements    ${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar links
+
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch to avoid stale element reference
+        ${links}=    Get WebElements    ${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
+
+        ${text}=     Get Text    ${link}
+        Log    Clicking navbar link: ${text}
+
+        Scroll Element Into View    ${link}
+        Sleep    0.3s
+
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+
+        IF    not ${clicked}
+            Log    JS click fallback for: ${text}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.6s
+        Run Keyword And Ignore Error    Capture Page Screenshot
+    END
+Test Poon Hill
+    Click Challenging
+    Wait And Click    ${poon_hill}
+    Wait Until Element Is Visible    ${poon_hill_content}
+    Scroll Element Into View    xpath=/html/body/div[3]/nav
+    Click All Poon Hill Navbar
+    Scroll Element Into View    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]/div[1]/h1
+Click All Amayangri Navbar
+        [Documentation]    Clicks all <a class="nav-link"> inside sticky navbar <ul>
+
+    ${NAVBAR}     Set Variable    //nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}  Set Variable    //nav[contains(@class,'sticky-navbar')]//ul/li/a[contains(@class,'nav-link')]
+
+    # Wait for navbar
+    Wait Until Element Is Visible    ${NAVBAR}    15s
+    Scroll Element Into View         ${NAVBAR}
+    Sleep    0.5s
+
+    # Fetch all links
+    ${links}=    Get WebElements    ${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar links
+
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch to avoid stale element issue
+        ${links}=    Get WebElements    ${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
+
+        ${text}=     Get Text    ${link}
+        Log    Clicking: ${text}
+
+        Scroll Element Into View    ${link}
+        Sleep    0.3s
+
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+
+        IF    not ${clicked}
+            Log    JS click fallback for: ${text}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.6s
+        Run Keyword And Ignore Error    Capture Page Screenshot
+    END
+Test Amayangri
+    Click Challenging
+    Wait And Click    ${amayangri}
+    Wait Until Element Is Visible    ${amayangri_content}
+    Scroll Element Into View    xpath=/html/body/div[3]/nav
+    Click All Amayangri Navbar
+    Scroll Element Into View    ${amayangri_content}
 
 
 

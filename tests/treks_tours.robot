@@ -18,6 +18,16 @@ Treks and Tours Test
     Test Annapurna Base Camp
     #Scroll Element Into View    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]
     Test Everest Base Camp
+    Scroll Element Into View    xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]
+    Test Mardi
+    Test Langtang
+    Test Poon Hill
+    Test Amayangri
+
+
+
+
+
 #Facebook Button
 #    Open Homepage
 #    Test Facebook

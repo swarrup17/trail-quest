@@ -71,4 +71,24 @@ ${manaslu_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h
 ${Annapurna_base_camp}    xpath=//*[@id="tab-moderate"]/section/div/div/div/div[2]/div[3]
 ${Annapurna_base_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
 ${Everest_base_camp}    xpath=//*[@id="tab-moderate"]/section/div/div/div/div[2]/div[4]
-${EBC_CONTENT}    xpath=
+${EBC_CONTENT}    xpath=/html/body/div[3]/div[1]/section[2]/div
+
+#Challenging
+${challenging}    xpath=/html/body/div[3]/section/div/div/ul/li[3]/h3
+${mardi}    xpath=//*[@id="tab-challenging"]/section/div/div/div/div[2]/div[1]
+${mardi_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
+${langtang}    xpath=//*[@id="tab-challenging"]/section/div/div/div/div[2]/div[2]
+${langtang_content}    xpath=/html/body/div[3]/div[1]/section[2]
+${poon_hill}    xpath=//*[@id="tab-challenging"]/section/div/div/div/div[2]/div[3]
+${poon_hill_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
+${amayangri}    xpath=//*[@id="tab-challenging"]/section/div/div/div/div[2]/div[4]
+${amayangri_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
+
+
+
+
+
+
+
+
+
