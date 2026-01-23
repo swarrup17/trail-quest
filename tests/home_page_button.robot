@@ -9,6 +9,7 @@ Test Teardown    Close Browser
 Verify Homepage Header Buttons Are Clickable
     Open Homepage
     Click All Elements Of Homepage
+
 #Treks and Tours Test
 #    Open Homepage
 #    Test The Push Your Limit

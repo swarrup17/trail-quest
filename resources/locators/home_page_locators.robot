@@ -84,11 +84,20 @@ ${poon_hill_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
 ${amayangri}    xpath=//*[@id="tab-challenging"]/section/div/div/div/div[2]/div[4]
 ${amayangri_content}    xpath=/html/body/div[3]/div[1]/section[2]/div
 
-
-
-
-
-
+#RECONNECT WITH NATURE
+${Reconnect_nature}    xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[3]/a
+${Reconnect_with_nature_contents}    xpath=/html/body/section[1]/div
+${Soulful_Returns}    xpath=/html/body/div[3]/section/div/div/ul/li[2]
+${wildlife_encounter}    xpath=/html/body/div[3]/section/div/div/ul/li[1]
+${Soulful_Returns_contents}    xpath=//*[@id="tab-soulful-returns"]/section
+${Nepal_Unbound_Heritage}    xpath=//*[@id="tab-soulful-returns"]/section/div/div/div/div[2]/div[1]
+${Nepal_Unbound_Heritage_Content}    xpath=/html/body/div[3]/div[1]/section[2]/div
+${The_valley_tales}    xpath=//*[@id="tab-soulful-returns"]/section/div/div/div/div[2]/div[2]
+${Valley_tales_content}    xpath=/html/body/div[3]/div[1]/section[2]
+${The_Nepal_tales}    xpath=//*[@id="tab-soulful-returns"]/section/div/div/div/div[2]/div[3]
+${Nepal_tales_content}    xpath=/html/body/div[3]/div[1]/section[2]
+${Kalinchwok_crest}    xpath=//*[@id="tab-soulful-returns"]/section/div/div/div/div[2]/div[4]
+${Kalinchwok_crest_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
 
 
 
