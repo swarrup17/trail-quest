@@ -12,6 +12,9 @@ Explore The Ancient Tests
     Test Off The Beaten
     Test Muktinath Tours
     Test Kathmandu Pokhara Lumbini
-
+    Test 7 UNESCO Heritage
+    Test KTM Valley Tour
+    Test Narayanhiti Durbar
+    Test Kathmandu Durbar
 
 

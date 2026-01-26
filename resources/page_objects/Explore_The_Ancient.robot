@@ -113,6 +113,153 @@ Test Kathmandu Pokhara Lumbini
     Test KPL Navbar
     Scroll Element Into View    ${KPL_Content}
 
+Test Homestay
+    Open Trek And Tours Menu
+    Click Explore The Ancient
+    Scroll Element Into View    xpath=/html/body/div[3]/section/div/div/ul
+    Wait And Click    ${homestay}
+    Scroll Element Into View    xpath=//*[@id="tab-homestays"]/section
+Test 7 UNESCO Heritage Navbar
+    [Documentation]    Click all section links inside sticky navbar (Intro → FAQS)
+
+    ${NAVBAR}=     Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
+
+    # Ensure navbar exists
+    Wait Until Element Is Visible    ${NAVBAR}    15s
+    Scroll Element Into View         ${NAVBAR}
+    Sleep    0.5s
+
+    # Get all section links
+    ${links}=    Get WebElements    ${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar links
+
+    FOR    ${i}    IN RANGE    ${count}
+        # Re-fetch to avoid stale element reference
+        ${links}=    Get WebElements    ${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${i}]
+
+        ${text}=    Get Text    ${link}
+        Log    Clicking section: ${text}
+
+        Scroll Element Into View         ${link}
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+        IF    not ${clicked}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.6s
+    END
+
+Test 7 UNESCO Heritage
+    Test Homestay
+    Wait And Click    ${UNESCO}
+    Wait Until Element Is Visible    ${UNESCO_Content}
+    Scroll Element Into View    Xpath=/html/body/div[3]/nav
+    Test 7 UNESCO Heritage Navbar
+    Scroll Element Into View    ${UNESCO_Content}
+
+#Test KTM Valley Tour Navbar
+
+Test KTM Valley Tour
+    Test Homestay
+    Wait And Click    ${KTM_Valley_Tour}
+    Go Back
+Test Narayanhiti Navbar
+    [Documentation]    Click all section links inside sticky navbar (Intro → FAQS)
+
+    ${NAVBAR}=     Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]//ul//a[contains(@class,'nav-link')]
+
+    # Ensure navbar is present
+    Wait Until Element Is Visible    ${NAVBAR}    15s
+    Scroll Element Into View         ${NAVBAR}
+    Sleep    0.5s
+
+    # Collect all nav links
+    ${links}=    Get WebElements    ${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar links
+
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch elements to avoid stale reference
+        ${links}=    Get WebElements    ${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
+
+        ${text}=    Get Text    ${link}
+        Log    Clicking sticky navbar link: ${text}
+
+        Scroll Element Into View         ${link}
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+        IF    not ${clicked}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.6s
+    END
+
+Test Narayanhiti Durbar
+    Test Homestay
+    Wait And Click    ${Narayanhiti}
+    Wait Until Element Is Visible    ${Narayanhiti_content}
+    Test Narayanhiti Navbar
+    Scroll Element Into View    ${Narayanhiti_content}
+    Click Home Menu
+Test Kathmandu Durbar Navbar
+    [Documentation]    Click all section links inside sticky navbar (Intro → FAQS)
+
+    ${NAVBAR}=     Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]
+    ${NAV_LINKS}=  Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]//ul//li//a[contains(@class,'nav-link')]
+
+    # Ensure sticky navbar is present
+    Wait Until Element Is Visible    ${NAVBAR}    15s
+    Scroll Element Into View         ${NAVBAR}
+    Sleep    0.5s
+
+    # Get all section links
+    ${links}=    Get WebElements    ${NAV_LINKS}
+    ${count}=    Get Length         ${links}
+    Log    Found ${count} sticky navbar section links
+
+    FOR    ${index}    IN RANGE    ${count}
+        # Re-fetch to avoid stale element issues
+        ${links}=    Get WebElements    ${NAV_LINKS}
+        ${link}=     Set Variable       ${links}[${index}]
+
+        ${text}=    Get Text    ${link}
+        Log    Clicking section: ${text}
+
+        Scroll Element Into View         ${link}
+        Wait Until Element Is Visible    ${link}    10s
+        Wait Until Element Is Enabled    ${link}    10s
+
+        ${clicked}=    Run Keyword And Return Status    Click Element    ${link}
+        IF    not ${clicked}
+            Execute Javascript    arguments[0].click();    ${link}
+        END
+
+        Sleep    0.6s
+    END
+
+
+Test Kathmandu Durbar
+    Test Homestay
+    Wait And Click    ${KTM_Durbar}
+    Wait Until Element Is Visible    ${KTM_Durbar_Content}
+    Scroll Element Into View    xpath=/html/body/div[3]/nav
+    Test Kathmandu Durbar Navbar
+    Scroll Element Into View    ${KTM_Durbar Content}
+
+
+
+
 
 
 

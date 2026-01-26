@@ -122,4 +122,14 @@ ${Muktinath}    xpath=/html/body/div[3]/section/div/div/div[4]/section/div/div/d
 ${Muktinath_Content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[2]/div/div
 ${KPL}    xpath=//*[@id="tab-forgotten-cultures"]/section/div/div/div/div[2]/div[2]
 ${KPL_Content}    xpath=/html/body/div[3]/div[1]/section[1]/div/div[2]/div/div
+${homestay}    xpath=/html/body/div[3]/section/div/div/ul/li[3]
+${UNESCO}    xpath=//*[@id="tab-homestays"]/section/div/div/div/div[2]/div[1]
+${UNESCO_Content}    xpath=//*[@id="gallery"]
+${KTM_Valley_Tour}    xpath=//*[@id="tab-homestays"]/section/div/div/div/div[2]/div[2]
+#${KTM_Content}    xpath=
+${Narayanhiti}    xpath=//*[@id="tab-homestays"]/section/div/div/div/div[2]/div[3]
+${Narayanhiti_content}    xpath=/html/body/div[3]/div/section[1]/div/div[1]/div[1]/h1
+${KTM_Durbar}    xpath=//*[@id="tab-homestays"]/section/div/div/div/div[2]/div[4]
+${KTM_Durbar_Content}    xpath=/html/body/div[3]/div[1]/section[2]/div
+
 
