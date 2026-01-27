@@ -4,7 +4,7 @@ Library    OperatingSystem
 
 *** Variables ***
 ${BASE_URL}         https://trailquest.global/
-${BROWSER}          Chrome
+${BROWSER}          chrome
 ${TIMEOUT}          10s
 ${MOBILE_MENU_BTN}  xpath=//button[contains(@class,'icon-menu')]
 ${NAVBAR}           xpath=//nav[contains(@class,'navbar')]   # replace with actual navbar locator
@@ -13,8 +13,8 @@ ${NAVBAR}           xpath=//nav[contains(@class,'navbar')]   # replace with actu
 Open Browser To Application
     ${chrome_options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium.webdriver
     ${args}=    Create List
+    ...    --headless=new
     ...    --window-size=1920,1080
-    ...    --start-maximized
     ...    --no-sandbox
     ...    --disable-dev-shm-usage
     ...    --disable-gpu

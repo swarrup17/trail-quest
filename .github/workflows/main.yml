@@ -28,17 +28,12 @@ jobs:
 
       # 4️⃣ Install Chrome (using maintained GitHub Action)
       - name: Install Chrome
+        id: chrome
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
 
-      # 5️⃣ Install ChromeDriver
-      - name: Install ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-        with:
-          chromedriver-version: latest
-
-      # 6️⃣ Start virtual display for Chrome
+      # 5️⃣ Start virtual display for Chrome (Selenium Manager will handle ChromeDriver)
       - name: Start Xvfb
         run: |
           Xvfb :99 -screen 0 1920x1080x24 >/dev/null 2>&1 &
@@ -46,7 +41,7 @@ jobs:
         env:
           DISPLAY: :99
 
-      # 7️⃣ Run Robot Tests
+      # 6️⃣ Run Robot Tests
       - name: Run Robot Tests
         run: |
           robot -d output tests/
