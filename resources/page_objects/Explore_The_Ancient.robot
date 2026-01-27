@@ -212,7 +212,7 @@ Test Narayanhiti Durbar
     Test Narayanhiti Navbar
     Scroll Element Into View    ${Narayanhiti_content}
     Click Home Menu
-Test Kathmandu Durbar Navbar
+Test Kathmandu Durbar Navbar    
     [Documentation]    Click all section links inside sticky navbar (Intro → FAQS)
 
     ${NAVBAR}=     Set Variable    xpath=//nav[contains(@class,'sticky-navbar')]
