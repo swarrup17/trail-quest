@@ -136,7 +136,7 @@ Test The Khopra Reset
     Test Indoor Retreats
     Wait And Click    ${The_khopra_reset}
     Wait Until Element Is Visible    ${The_khopra_reset_content}
-    Scroll Element Into View    xpath=/html/body/div[3]/nav
+    Scroll Element Into View    xpath=/html/body/div[3]/nav/div/div
     Test The Khopra Reset Navbar
     Scroll Element Into View    ${The_khopra_reset_content}
 

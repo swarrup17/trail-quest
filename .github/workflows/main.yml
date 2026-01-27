@@ -46,11 +46,12 @@ jobs:
         run: |
           robot -d output tests/
 
-      # 8️⃣ Zip Robot output
+      # 8️⃣ Zip key Robot output files only (keep email attachment small)
       - name: Zip Robot Reports
         if: always()
         run: |
-          zip -r robot-reports.zip output
+          cd output
+          zip -r ../robot-reports.zip report.html log.html output.xml || echo "No standard Robot output files to zip"
 
       # 9️⃣ Upload ZIP artifact
       - name: Upload Robot Reports ZIP
