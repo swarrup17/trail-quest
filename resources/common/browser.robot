@@ -6,18 +6,14 @@ Library    OperatingSystem
 ${BASE_URL}         https://trailquest.global/
 ${BROWSER}          chrome
 ${TIMEOUT}          10s
-<<<<<<< HEAD
 ${WINDOW_WIDTH}     1920
 ${WINDOW_HEIGHT}    1080
-=======
 ${HEADLESS}         True
->>>>>>> 12a6bb9 (ADDED TAGS)
 ${MOBILE_MENU_BTN}  xpath=//button[contains(@class,'icon-menu')]
 ${NAVBAR}           xpath=//nav[contains(@class,'navbar')]
 
 *** Keywords ***
-<<<<<<< HEAD
-=======
+
 Open Browser To Application
     ${chrome_options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium.webdriver
 
