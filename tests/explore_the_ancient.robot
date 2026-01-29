@@ -6,7 +6,6 @@ Resource    ../resources/page_objects/Explore_The_Ancient.robot
 Test Teardown    Close Browser
 *** Test Cases ***
 Explore The Ancient Tests
-    [Tags]    regression    ui    ancient
     Open Homepage
     Verify Logo Is Visible
     Open Trek And Tours Menu

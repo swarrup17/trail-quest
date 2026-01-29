@@ -7,7 +7,6 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Verify Homepage Header Buttons Are Clickable
-    [Tags]    smoke    ui    navigation
     Open Homepage
     Click All Elements Of Homepage
 

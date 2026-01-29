@@ -1,306 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<robot generator="Robot 7.4.1 (Python 3.10.11 on win32)" generated="2026-01-28T11:06:49.519981" rpa="false" schemaversion="5">
-<suite id="s1" name="Home Page Button" source="C:\Users\Swarup Dahal\Desktop\project\trail-quest\tests\home_page_button.robot">
-<test id="s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
-<kw name="Open Homepage" owner="home_page">
-<kw name="Open Browser To Application" owner="browser">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-01-28T11:06:50.015505" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016F8FD99000&gt;</msg>
-=======
-<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260128 17:13:46.128" rpa="false" schemaversion="4">
-<suite id="s1" name="Tests" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests">
-<suite id="s1-s1" name="Home Page Button" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\home_page_button.robot">
-<test id="s1-s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
-<kw name="Open Homepage" library="home_page">
-<kw name="Open Browser To Application" library="browser">
-<kw name="Evaluate" library="BuiltIn">
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260129 14:37:31.971" rpa="false" schemaversion="4">
-<suite id="s1" name="Home Page Button" source="C:\Users\Swarup Dahal\PycharmProjects\trail-quest\tests\home_page_button.robot">
-<test id="s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
+<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260129 15:13:25.171" rpa="false" schemaversion="4">
+<suite id="s1" name="Treks Tours" source="C:\Users\Swarup Dahal\PycharmProjects\trail-quest\tests\treks_tours.robot">
+<test id="s1-t1" name="Treks and Tours Test" line="9">
 <kw name="Open Homepage" library="home_page">
 <kw name="Open Browser To Application" library="browser">
 <doc>Opens browser with specified window size 1920x1080</doc>
 <kw name="Evaluate" library="BuiltIn">
->>>>>>> e5447c0 (Test)
 <var>${chrome_options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>modules=selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="0.000000"/>
-=======
-<msg timestamp="20260129 14:37:32.628" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001E046ECAE40&gt;</msg>
-<status status="PASS" starttime="20260129 14:37:32.628" endtime="20260129 14:37:32.628"/>
->>>>>>> e5447c0 (Test)
+<msg timestamp="20260129 15:13:25.742" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000276B0A3F620&gt;</msg>
+<status status="PASS" starttime="20260129 15:13:25.742" endtime="20260129 15:13:25.742"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${window_size_arg}</var>
 <arg>--window-size\=${WINDOW_WIDTH},${WINDOW_HEIGHT}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20260129 14:37:32.629" level="INFO">${window_size_arg} = --window-size=1920,1080</msg>
-<status status="PASS" starttime="20260129 14:37:32.628" endtime="20260129 14:37:32.629"/>
+<msg timestamp="20260129 15:13:25.743" level="INFO">${window_size_arg} = --window-size=1920,1080</msg>
+<status status="PASS" starttime="20260129 15:13:25.742" endtime="20260129 15:13:25.743"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>${window_size_arg}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260129 14:37:32.629" endtime="20260129 14:37:32.629"/>
+<status status="PASS" starttime="20260129 15:13:25.743" endtime="20260129 15:13:25.743"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260129 14:37:32.629" endtime="20260129 14:37:32.629"/>
+<status status="PASS" starttime="20260129 15:13:25.743" endtime="20260129 15:13:25.743"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260129 14:37:32.629" endtime="20260129 14:37:32.630"/>
+<status status="PASS" starttime="20260129 15:13:25.744" endtime="20260129 15:13:25.744"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260129 14:37:32.630" endtime="20260129 14:37:32.630"/>
+<status status="PASS" starttime="20260129 15:13:25.744" endtime="20260129 15:13:25.744"/>
 </kw>
-<<<<<<< HEAD
-<kw name="Call Method" owner="BuiltIn">
-=======
-<msg timestamp="20260128 17:13:47.063" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FAF2CA6BA0&gt;</msg>
-<status status="PASS" starttime="20260128 17:13:47.063" endtime="20260128 17:13:47.063"/>
-</kw>
-<kw name="Get Operating System">
-<var>${os}</var>
-<msg timestamp="20260128 17:13:47.074" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
-<status status="FAIL" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>${args}</var>
-<arg>--window-size=1920,1080</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'Linux' in '${os}'</arg>
-<arg>Append To List</arg>
-<arg>${args}</arg>
-<arg>--no-sandbox</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'Linux' in '${os}'</arg>
-<arg>Append To List</arg>
-<arg>${args}</arg>
-<arg>--disable-dev-shm-usage</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.075"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'Linux' in '${os}'</arg>
-<arg>Append To List</arg>
-<arg>${args}</arg>
-<arg>--disable-setuid-sandbox</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.075" endtime="20260128 17:13:47.075"/>
-</kw>
-<kw name="Append To List">
-<arg>${args}</arg>
-<arg>--disable-gpu</arg>
-<status status="NOT RUN" starttime="20260128 17:13:47.082" endtime="20260128 17:13:47.082"/>
-</kw>
-<kw name="Append To List">
-<arg>${args}</arg>
-<arg>--disable-software-rasterizer</arg>
-<status status="NOT RUN" starttime="20260128 17:13:47.090" endtime="20260128 17:13:47.090"/>
-</kw>
-<kw name="Append To List">
-<arg>${args}</arg>
-<arg>--remote-debugging-port=9222</arg>
-<status status="NOT RUN" starttime="20260128 17:13:47.095" endtime="20260128 17:13:47.095"/>
-</kw>
-<kw name="Append To List">
-<arg>${args}</arg>
-<arg>--disable-extensions</arg>
-<status status="NOT RUN" starttime="20260128 17:13:47.103" endtime="20260128 17:13:47.104"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
-<arg>Append To List</arg>
-<arg>${args}</arg>
-<arg>--headless=new</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.104"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
-<arg>Append To List</arg>
-<arg>${args}</arg>
-<arg>--headless</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.104"/>
-</kw>
-<for flavor="IN">
-<var>${arg}</var>
-<value>@{args}</value>
-<iter>
-<var name="${arg}"/>
 <kw name="Call Method" library="BuiltIn">
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<kw name="Call Method" library="BuiltIn">
->>>>>>> e5447c0 (Test)
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="0.000000"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-01-28T11:06:50.015505" level="INFO">Opening browser 'chrome' to base url 'https://trailquest.global/'.</msg>
-<msg time="2026-01-28T11:06:54.340762" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
-=======
-<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
-</kw>
-<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
-</iter>
-<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.105"/>
-</for>
-<kw name="Open Browser" library="SeleniumLibrary">
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<status status="PASS" starttime="20260129 14:37:32.630" endtime="20260129 14:37:32.630"/>
+<status status="PASS" starttime="20260129 15:13:25.744" endtime="20260129 15:13:25.744"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
->>>>>>> e5447c0 (Test)
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=${chrome_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="14.375418"/>
-=======
-<msg timestamp="20260129 14:37:32.631" level="INFO">Opening browser 'chrome' to base url 'https://trailquest.global/'.</msg>
-<status status="PASS" starttime="20260129 14:37:32.630" endtime="20260129 14:37:40.141"/>
->>>>>>> e5447c0 (Test)
+<msg timestamp="20260129 15:13:25.745" level="INFO">Opening browser 'chrome' to base url 'https://trailquest.global/'.</msg>
+<status status="PASS" starttime="20260129 15:13:25.744" endtime="20260129 15:13:29.786"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:07:04.392704" elapsed="0.005036"/>
-=======
-<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
-</kw>
-<status status="FAIL" starttime="20260128 17:13:47.063" endtime="20260128 17:13:47.106"/>
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<status status="PASS" starttime="20260129 14:37:40.141" endtime="20260129 14:37:40.146"/>
->>>>>>> e5447c0 (Test)
+<status status="PASS" starttime="20260129 15:13:29.786" endtime="20260129 15:13:29.790"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>${WINDOW_WIDTH}</arg>
 <arg>${WINDOW_HEIGHT}</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20260129 14:37:40.146" endtime="20260129 14:37:40.514"/>
+<status status="PASS" starttime="20260129 15:13:29.790" endtime="20260129 15:13:32.289"/>
 </kw>
-<status status="PASS" starttime="20260129 14:37:32.627" endtime="20260129 14:37:40.514"/>
+<status status="PASS" starttime="20260129 15:13:25.742" endtime="20260129 15:13:32.289"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:07:04.789670" elapsed="2.008911"/>
-=======
-<msg timestamp="20260129 14:37:42.515" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260129 14:37:40.514" endtime="20260129 14:37:42.515"/>
->>>>>>> e5447c0 (Test)
+<msg timestamp="20260129 15:13:34.290" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260129 15:13:32.290" endtime="20260129 15:13:34.290"/>
 </kw>
-<status status="PASS" starttime="20260129 14:37:32.626" endtime="20260129 14:37:42.515"/>
+<status status="PASS" starttime="20260129 15:13:25.741" endtime="20260129 15:13:34.291"/>
 </kw>
-<kw name="click all elements of homepage" library="home_page">
+<kw name="Test The Push Your Limit" library="treks_tours">
 <kw name="Verify Logo Is Visible" library="home_page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${logo}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:42.943" endtime="20260129 14:37:43.170"/>
+<status status="PASS" starttime="20260129 15:13:34.292" endtime="20260129 15:13:34.330"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260129 14:37:45.170" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260129 14:37:43.170" endtime="20260129 14:37:45.170"/>
+<msg timestamp="20260129 15:13:36.332" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260129 15:13:34.330" endtime="20260129 15:13:36.332"/>
 </kw>
-<status status="PASS" starttime="20260129 14:37:42.942" endtime="20260129 14:37:45.170"/>
+<status status="PASS" starttime="20260129 15:13:34.292" endtime="20260129 15:13:36.332"/>
 </kw>
-<kw name="Verify Homepage Header Buttons Are Clickable" library="home_page">
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<arg>5s</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:37:51.060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1805.png"&gt;&lt;img src="selenium-screenshot-1805.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:37:51.061" level="FAIL">Element 'xpath=//button[contains(@class,'icon-menu')]' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20260129 14:37:45.171" endtime="20260129 14:37:51.070"/>
-</kw>
-<msg timestamp="20260129 14:37:51.070" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:37:45.171" endtime="20260129 14:37:51.070"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
+<kw name="Open Trek And Tours Menu" library="home_page">
 <kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:37:51.071" endtime="20260129 14:37:51.071"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//div[contains(@class,'js-navList')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:51.071" endtime="20260129 14:37:51.071"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:37:51.070" endtime="20260129 14:37:51.071"/>
-</branch>
-<status status="PASS" starttime="20260129 14:37:51.070" endtime="20260129 14:37:51.071"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//a[normalize-space()='Home']</arg>
+<arg>${trek_and_tours}</arg>
 <doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:51.071" endtime="20260129 14:37:51.107"/>
+<status status="PASS" starttime="20260129 15:13:36.333" endtime="20260129 15:13:36.355"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:37:51.107" endtime="20260129 14:37:51.144"/>
+<status status="PASS" starttime="20260129 15:13:36.355" endtime="20260129 15:13:36.384"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:37:51.144" endtime="20260129 14:37:51.444"/>
+<status status="PASS" starttime="20260129 15:13:36.385" endtime="20260129 15:13:36.681"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${clicked}</var>
@@ -310,56 +128,59 @@
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:37:51.445" level="INFO">Clicking element 'xpath=//a[normalize-space()='Home']'.</msg>
-<status status="PASS" starttime="20260129 14:37:51.444" endtime="20260129 14:37:53.521"/>
+<msg timestamp="20260129 15:13:36.683" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/a/i'.</msg>
+<status status="PASS" starttime="20260129 15:13:36.682" endtime="20260129 15:13:36.755"/>
 </kw>
-<msg timestamp="20260129 14:37:53.521" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:37:51.444" endtime="20260129 14:37:53.521"/>
+<msg timestamp="20260129 15:13:36.755" level="INFO">${clicked} = True</msg>
+<status status="PASS" starttime="20260129 15:13:36.682" endtime="20260129 15:13:36.755"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${clicked}">
 <kw name="Log" library="BuiltIn">
 <arg>Using JS click fallback for ${locator}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:53.522" endtime="20260129 14:37:53.522"/>
+<status status="NOT RUN" starttime="20260129 15:13:36.756" endtime="20260129 15:13:36.756"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:53.522" endtime="20260129 14:37:53.522"/>
+<status status="NOT RUN" starttime="20260129 15:13:36.756" endtime="20260129 15:13:36.756"/>
 </kw>
-<status status="NOT RUN" starttime="20260129 14:37:53.521" endtime="20260129 14:37:53.522"/>
+<status status="NOT RUN" starttime="20260129 15:13:36.755" endtime="20260129 15:13:36.756"/>
 </branch>
-<status status="PASS" starttime="20260129 14:37:53.521" endtime="20260129 14:37:53.522"/>
+<status status="PASS" starttime="20260129 15:13:36.755" endtime="20260129 15:13:36.756"/>
 </if>
-<status status="PASS" starttime="20260129 14:37:51.071" endtime="20260129 14:37:53.523"/>
+<status status="PASS" starttime="20260129 15:13:36.332" endtime="20260129 15:13:36.756"/>
 </kw>
-<kw name="Click Navbar Menu And Subitems" library="home_page">
-<arg>Treks &amp; Tours</arg>
-<arg>Push Your Limits</arg>
-<arg>Reconnect With Nature</arg>
-<arg>Declutter Your Mind</arg>
-<arg>Explore The Ancients</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260129 15:13:38.757" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260129 15:13:36.756" endtime="20260129 15:13:38.757"/>
+</kw>
+<status status="PASS" starttime="20260129 15:13:36.332" endtime="20260129 15:13:38.758"/>
+</kw>
+<kw name="Click Push Your Limit" library="home_page">
 <kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
+<arg>${push_your_limit}</arg>
 <doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:53.524" endtime="20260129 14:37:53.553"/>
+<status status="PASS" starttime="20260129 15:13:38.759" endtime="20260129 15:13:38.780"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:37:53.554" endtime="20260129 14:37:53.580"/>
+<status status="PASS" starttime="20260129 15:13:38.781" endtime="20260129 15:13:38.803"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:37:53.580" endtime="20260129 14:37:53.885"/>
+<status status="PASS" starttime="20260129 15:13:38.803" endtime="20260129 15:13:39.088"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${clicked}</var>
@@ -369,1854 +190,215 @@
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:37:53.887" level="INFO">Clicking element 'xpath=//span[normalize-space()='Treks &amp; Tours']'.</msg>
-<status status="PASS" starttime="20260129 14:37:53.886" endtime="20260129 14:37:54.272"/>
+<msg timestamp="20260129 15:13:39.090" level="INFO">Clicking element 'xpath=/html/body/div[1]/header/div[1]/div/div/div/div/div[2]/div[2]/ul/li[2]/ul/li[2]/a'.</msg>
+<msg timestamp="20260129 15:13:48.765" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20260129 15:13:48.766" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
+<status status="FAIL" starttime="20260129 15:13:39.090" endtime="20260129 15:13:48.798"/>
 </kw>
-<msg timestamp="20260129 14:37:54.273" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:37:53.885" endtime="20260129 14:37:54.273"/>
+<msg timestamp="20260129 15:13:48.798" level="INFO">${clicked} = False</msg>
+<status status="PASS" starttime="20260129 15:13:39.089" endtime="20260129 15:13:48.798"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${clicked}">
 <kw name="Log" library="BuiltIn">
 <arg>Using JS click fallback for ${locator}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:54.274" endtime="20260129 14:37:54.274"/>
+<status status="FAIL" starttime="20260129 15:13:48.798" endtime="20260129 15:13:48.799"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:54.274" endtime="20260129 14:37:54.274"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.799" endtime="20260129 15:13:48.799"/>
 </kw>
-<status status="NOT RUN" starttime="20260129 14:37:54.273" endtime="20260129 14:37:54.274"/>
+<status status="FAIL" starttime="20260129 15:13:48.798" endtime="20260129 15:13:48.799"/>
 </branch>
-<status status="PASS" starttime="20260129 14:37:54.273" endtime="20260129 14:37:54.274"/>
+<status status="FAIL" starttime="20260129 15:13:48.798" endtime="20260129 15:13:48.799"/>
 </if>
-<status status="PASS" starttime="20260129 14:37:53.523" endtime="20260129 14:37:54.274"/>
+<status status="FAIL" starttime="20260129 15:13:38.758" endtime="20260129 15:13:48.799"/>
 </kw>
-<for flavor="IN">
-<var>${item}</var>
-<value>@{submenu_items}</value>
-<iter>
-<var name="${item}">Push Your Limits</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.799" endtime="20260129 15:13:48.799"/>
+</kw>
+<status status="FAIL" starttime="20260129 15:13:38.758" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Go Down to" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Click Easy" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Click Everest Picture" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Click All Everest Sticky Navbar Links" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${share}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.800" endtime="20260129 15:13:48.800"/>
+</kw>
 <kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
+<arg>${share}</arg>
 <doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
+<arg>${facebook}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:54.275" endtime="20260129 14:37:54.306"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:37:54.307" endtime="20260129 14:37:54.339"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
+</kw>
+<kw name="Handle Share Button Click" library="treks_tours">
+<var>${main}</var>
+<arg>${facebook}</arg>
+<doc>Clicks share button and switches to new window/tab</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.801" endtime="20260129 15:13:48.801"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>facebook_popup.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
+</kw>
+<kw name="Close Share Window And Return" library="treks_tours">
+<arg>${main}</arg>
+<doc>Closes current window and returns to main</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Facebook share tested successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>${share}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:37:54.339" endtime="20260129 14:37:54.637"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:37:54.640" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Push Your Limits']'.</msg>
-<status status="PASS" starttime="20260129 14:37:54.639" endtime="20260129 14:37:56.793"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
 </kw>
-<msg timestamp="20260129 14:37:56.793" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:37:54.638" endtime="20260129 14:37:56.793"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:56.794" endtime="20260129 14:37:56.794"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:56.794" endtime="20260129 14:37:56.794"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:37:56.793" endtime="20260129 14:37:56.794"/>
-</branch>
-<status status="PASS" starttime="20260129 14:37:56.793" endtime="20260129 14:37:56.794"/>
-</if>
-<status status="PASS" starttime="20260129 14:37:54.275" endtime="20260129 14:37:56.794"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:37:56.794" endtime="20260129 14:37:56.813"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:37:57.065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1806.png"&gt;&lt;img src="selenium-screenshot-1806.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:37:57.066" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:37:56.814" endtime="20260129 14:37:57.070"/>
-</kw>
-<msg timestamp="20260129 14:37:57.071" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:37:56.813" endtime="20260129 14:37:57.071"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
 <kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
+<arg>${share}</arg>
 <doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:37:57.071" endtime="20260129 14:37:57.071"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
 </kw>
-<status status="NOT RUN" starttime="20260129 14:37:57.071" endtime="20260129 14:37:57.071"/>
-</branch>
-<status status="PASS" starttime="20260129 14:37:57.071" endtime="20260129 14:37:57.071"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.802" endtime="20260129 15:13:48.802"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
+<arg>${twitter}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:57.072" endtime="20260129 14:37:57.090"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.803" endtime="20260129 15:13:48.803"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:37:57.090" endtime="20260129 14:37:57.113"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.803" endtime="20260129 15:13:48.803"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:37:57.113" endtime="20260129 14:37:57.387"/>
+<kw name="Handle Share Button Click" library="treks_tours">
+<var>${main}</var>
+<arg>${twitter}</arg>
+<doc>Clicks share button and switches to new window/tab</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.803" endtime="20260129 15:13:48.803"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:37:57.388" level="INFO">Clicking element 'xpath=//span[normalize-space()='Treks &amp; Tours']'.</msg>
-<status status="PASS" starttime="20260129 14:37:57.388" endtime="20260129 14:37:57.539"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.803" endtime="20260129 15:13:48.803"/>
 </kw>
-<msg timestamp="20260129 14:37:57.539" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:37:57.387" endtime="20260129 14:37:57.539"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>twitter_popup.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.803" endtime="20260129 15:13:48.803"/>
 </kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
+<kw name="Close Share Window And Return" library="treks_tours">
+<arg>${main}</arg>
+<doc>Closes current window and returns to main</doc>
+<status status="NOT RUN" starttime="20260129 15:13:48.804" endtime="20260129 15:13:48.804"/>
+</kw>
 <kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
+<arg>Twitter share tested successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:57.540" endtime="20260129 14:37:57.540"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.804" endtime="20260129 15:13:48.804"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:37:57.540" endtime="20260129 14:37:57.540"/>
+<status status="FAIL" starttime="20260129 15:13:34.291" endtime="20260129 15:13:48.804"/>
 </kw>
-<status status="NOT RUN" starttime="20260129 14:37:57.540" endtime="20260129 14:37:57.540"/>
-</branch>
-<status status="PASS" starttime="20260129 14:37:57.539" endtime="20260129 14:37:57.540"/>
-</if>
-<status status="PASS" starttime="20260129 14:37:57.072" endtime="20260129 14:37:57.541"/>
+<kw name="Test KanchenjungaTrek" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.804" endtime="20260129 15:13:48.804"/>
 </kw>
-<status status="PASS" starttime="20260129 14:37:54.275" endtime="20260129 14:37:57.541"/>
-</iter>
-<iter>
-<var name="${item}">Reconnect With Nature</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:37:57.542" endtime="20260129 14:37:57.585"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:37:57.585" endtime="20260129 14:37:57.612"/>
+<kw name="Test Everest Via Gokyo_Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.805" endtime="20260129 15:13:48.805"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>xpath=/html/body/div[1]/header/div[1]/div/div/div/a/img[1]</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:37:57.612" endtime="20260129 14:37:57.895"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.805" endtime="20260129 15:13:48.805"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:37:57.896" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Reconnect With Nature']'.</msg>
-<status status="PASS" starttime="20260129 14:37:57.895" endtime="20260129 14:38:00.030"/>
-</kw>
-<msg timestamp="20260129 14:38:00.030" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:37:57.895" endtime="20260129 14:38:00.030"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:00.031" endtime="20260129 14:38:00.031"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:00.031" endtime="20260129 14:38:00.031"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:00.030" endtime="20260129 14:38:00.031"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:00.030" endtime="20260129 14:38:00.031"/>
-</if>
-<status status="PASS" starttime="20260129 14:37:57.541" endtime="20260129 14:38:00.031"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:00.031" endtime="20260129 14:38:00.162"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:00.447" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1807.png"&gt;&lt;img src="selenium-screenshot-1807.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:00.448" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:00.162" endtime="20260129 14:38:00.449"/>
-</kw>
-<msg timestamp="20260129 14:38:00.449" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:00.162" endtime="20260129 14:38:00.449"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:00.450" endtime="20260129 14:38:00.450"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:00.449" endtime="20260129 14:38:00.450"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:00.449" endtime="20260129 14:38:00.450"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:00.450" endtime="20260129 14:38:00.466"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:00.466" endtime="20260129 14:38:00.485"/>
+<kw name="Test Annapurna Circuit Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.806" endtime="20260129 15:13:48.806"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>xpath=/html/body/div[1]/header/div[1]/div/div/div</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:00.485" endtime="20260129 14:38:00.772"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.806" endtime="20260129 15:13:48.806"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:00.773" level="INFO">Clicking element 'xpath=//span[normalize-space()='Treks &amp; Tours']'.</msg>
-<status status="PASS" starttime="20260129 14:38:00.773" endtime="20260129 14:38:00.836"/>
+<kw name="Test Manaslu Circuit Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.806" endtime="20260129 15:13:48.807"/>
 </kw>
-<msg timestamp="20260129 14:38:00.837" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:00.772" endtime="20260129 14:38:00.837"/>
+<kw name="Test Annapurna Base Camp" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.807" endtime="20260129 15:13:48.807"/>
 </kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:00.838" endtime="20260129 14:38:00.838"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:00.838" endtime="20260129 14:38:00.838"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:00.837" endtime="20260129 14:38:00.838"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:00.837" endtime="20260129 14:38:00.838"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:00.450" endtime="20260129 14:38:00.838"/>
-</kw>
-<status status="PASS" starttime="20260129 14:37:57.541" endtime="20260129 14:38:00.838"/>
-</iter>
-<iter>
-<var name="${item}">Declutter Your Mind</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:00.839" endtime="20260129 14:38:01.079"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:01.079" endtime="20260129 14:38:01.099"/>
+<kw name="Test Everest Base Camp" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.807" endtime="20260129 15:13:48.807"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:01.100" endtime="20260129 14:38:01.405"/>
+<status status="NOT RUN" starttime="20260129 15:13:48.808" endtime="20260129 15:13:48.808"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:01.406" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Declutter Your Mind']'.</msg>
-<status status="PASS" starttime="20260129 14:38:01.406" endtime="20260129 14:38:02.922"/>
+<kw name="Test Mardi" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.808" endtime="20260129 15:13:48.808"/>
 </kw>
-<msg timestamp="20260129 14:38:02.922" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:01.405" endtime="20260129 14:38:02.922"/>
+<kw name="Test Langtang" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.808" endtime="20260129 15:13:48.808"/>
 </kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:02.923" endtime="20260129 14:38:02.923"/>
+<kw name="Test Poon Hill" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.808" endtime="20260129 15:13:48.808"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:02.923" endtime="20260129 14:38:02.923"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:02.922" endtime="20260129 14:38:02.923"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:02.922" endtime="20260129 14:38:02.923"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:00.838" endtime="20260129 14:38:02.923"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:02.923" endtime="20260129 14:38:02.937"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:03.205" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1808.png"&gt;&lt;img src="selenium-screenshot-1808.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:03.206" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:02.937" endtime="20260129 14:38:03.207"/>
-</kw>
-<msg timestamp="20260129 14:38:03.208" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:02.937" endtime="20260129 14:38:03.208"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:03.208" endtime="20260129 14:38:03.208"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:03.208" endtime="20260129 14:38:03.208"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:03.208" endtime="20260129 14:38:03.208"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:03.209" endtime="20260129 14:38:03.231"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:03.231" endtime="20260129 14:38:03.256"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:03.256" endtime="20260129 14:38:03.546"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:03.547" level="INFO">Clicking element 'xpath=//span[normalize-space()='Treks &amp; Tours']'.</msg>
-<status status="PASS" starttime="20260129 14:38:03.546" endtime="20260129 14:38:03.674"/>
-</kw>
-<msg timestamp="20260129 14:38:03.674" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:03.546" endtime="20260129 14:38:03.675"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:03.675" endtime="20260129 14:38:03.675"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:03.675" endtime="20260129 14:38:03.675"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:03.675" endtime="20260129 14:38:03.675"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:03.675" endtime="20260129 14:38:03.675"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:03.208" endtime="20260129 14:38:03.675"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:00.838" endtime="20260129 14:38:03.675"/>
-</iter>
-<iter>
-<var name="${item}">Explore The Ancients</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:03.676" endtime="20260129 14:38:03.715"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:03.715" endtime="20260129 14:38:03.745"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:03.745" endtime="20260129 14:38:04.045"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:04.046" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Explore The Ancients']'.</msg>
-<status status="PASS" starttime="20260129 14:38:04.046" endtime="20260129 14:38:07.681"/>
-</kw>
-<msg timestamp="20260129 14:38:07.681" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:04.045" endtime="20260129 14:38:07.681"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:07.682" endtime="20260129 14:38:07.682"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:07.682" endtime="20260129 14:38:07.682"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:07.681" endtime="20260129 14:38:07.682"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:07.681" endtime="20260129 14:38:07.682"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:03.676" endtime="20260129 14:38:07.683"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:07.683" endtime="20260129 14:38:07.697"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:07.926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1809.png"&gt;&lt;img src="selenium-screenshot-1809.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:07.927" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:07.698" endtime="20260129 14:38:07.928"/>
-</kw>
-<msg timestamp="20260129 14:38:07.928" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:07.698" endtime="20260129 14:38:07.928"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:07.928" endtime="20260129 14:38:07.928"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:07.928" endtime="20260129 14:38:07.928"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:07.928" endtime="20260129 14:38:07.929"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:07.929" endtime="20260129 14:38:07.947"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:07.947" endtime="20260129 14:38:07.971"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:07.971" endtime="20260129 14:38:08.260"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:08.261" level="INFO">Clicking element 'xpath=//span[normalize-space()='Treks &amp; Tours']'.</msg>
-<status status="PASS" starttime="20260129 14:38:08.261" endtime="20260129 14:38:08.381"/>
-</kw>
-<msg timestamp="20260129 14:38:08.381" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:08.261" endtime="20260129 14:38:08.381"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:08.382" endtime="20260129 14:38:08.382"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:08.382" endtime="20260129 14:38:08.382"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:08.381" endtime="20260129 14:38:08.382"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:08.381" endtime="20260129 14:38:08.382"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:07.929" endtime="20260129 14:38:08.382"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:03.676" endtime="20260129 14:38:08.382"/>
-</iter>
-<status status="PASS" starttime="20260129 14:37:54.274" endtime="20260129 14:38:08.382"/>
-</for>
-<status status="PASS" starttime="20260129 14:37:53.523" endtime="20260129 14:38:08.382"/>
-</kw>
-<kw name="Click Navbar Menu And Subitems" library="home_page">
-<arg>About</arg>
-<arg>Who We Are</arg>
-<arg>Our Core Values</arg>
-<arg>Why Choose trailQuest?</arg>
-<arg>Our Squad</arg>
-<arg>What We Rally For</arg>
-<arg>Terms &amp; Conditions</arg>
-<arg>Privacy Policy</arg>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:08.383" endtime="20260129 14:38:08.407"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:08.407" endtime="20260129 14:38:08.428"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:08.428" endtime="20260129 14:38:08.732"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:08.734" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:08.734" endtime="20260129 14:38:08.798"/>
-</kw>
-<msg timestamp="20260129 14:38:08.798" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:08.733" endtime="20260129 14:38:08.798"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:08.798" endtime="20260129 14:38:08.799"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:08.799" endtime="20260129 14:38:08.799"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:08.798" endtime="20260129 14:38:08.799"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:08.798" endtime="20260129 14:38:08.799"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:08.383" endtime="20260129 14:38:08.799"/>
-</kw>
-<for flavor="IN">
-<var>${item}</var>
-<value>@{submenu_items}</value>
-<iter>
-<var name="${item}">Who We Are</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:08.800" endtime="20260129 14:38:08.823"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:08.823" endtime="20260129 14:38:08.845"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:08.845" endtime="20260129 14:38:09.130"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:09.132" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Who We Are']'.</msg>
-<status status="PASS" starttime="20260129 14:38:09.131" endtime="20260129 14:38:10.636"/>
-</kw>
-<msg timestamp="20260129 14:38:10.636" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:09.130" endtime="20260129 14:38:10.636"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:10.637" endtime="20260129 14:38:10.637"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:10.637" endtime="20260129 14:38:10.638"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:10.637" endtime="20260129 14:38:10.638"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:10.636" endtime="20260129 14:38:10.638"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:08.799" endtime="20260129 14:38:10.638"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:10.638" endtime="20260129 14:38:10.656"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:10.894" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1810.png"&gt;&lt;img src="selenium-screenshot-1810.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:10.895" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:10.656" endtime="20260129 14:38:10.896"/>
-</kw>
-<msg timestamp="20260129 14:38:10.896" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:10.656" endtime="20260129 14:38:10.896"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:10.896" endtime="20260129 14:38:10.896"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:10.896" endtime="20260129 14:38:10.896"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:10.896" endtime="20260129 14:38:10.896"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:10.897" endtime="20260129 14:38:10.917"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:10.917" endtime="20260129 14:38:10.937"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:10.937" endtime="20260129 14:38:11.232"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:11.233" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:11.233" endtime="20260129 14:38:11.377"/>
-</kw>
-<msg timestamp="20260129 14:38:11.377" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:11.233" endtime="20260129 14:38:11.377"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:11.378" endtime="20260129 14:38:11.378"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:11.378" endtime="20260129 14:38:11.378"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:11.377" endtime="20260129 14:38:11.378"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:11.377" endtime="20260129 14:38:11.378"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:10.896" endtime="20260129 14:38:11.378"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:08.799" endtime="20260129 14:38:11.379"/>
-</iter>
-<iter>
-<var name="${item}">Our Core Values</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:11.380" endtime="20260129 14:38:11.424"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:11.425" endtime="20260129 14:38:11.461"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:11.461" endtime="20260129 14:38:11.747"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:11.748" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Our Core Values']'.</msg>
-<status status="PASS" starttime="20260129 14:38:11.748" endtime="20260129 14:38:12.923"/>
-</kw>
-<msg timestamp="20260129 14:38:12.924" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:11.747" endtime="20260129 14:38:12.924"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:12.924" endtime="20260129 14:38:12.924"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:12.924" endtime="20260129 14:38:12.924"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:12.924" endtime="20260129 14:38:12.924"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:12.924" endtime="20260129 14:38:12.925"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:11.379" endtime="20260129 14:38:12.925"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:12.925" endtime="20260129 14:38:12.946"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:13.187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1811.png"&gt;&lt;img src="selenium-screenshot-1811.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:13.187" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:12.947" endtime="20260129 14:38:13.188"/>
-</kw>
-<msg timestamp="20260129 14:38:13.188" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:12.947" endtime="20260129 14:38:13.188"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:13.188" endtime="20260129 14:38:13.188"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:13.188" endtime="20260129 14:38:13.188"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:13.188" endtime="20260129 14:38:13.188"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:13.189" endtime="20260129 14:38:13.206"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:13.206" endtime="20260129 14:38:13.227"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:13.227" endtime="20260129 14:38:13.513"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:13.514" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:13.513" endtime="20260129 14:38:13.633"/>
-</kw>
-<msg timestamp="20260129 14:38:13.634" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:13.513" endtime="20260129 14:38:13.634"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:13.634" endtime="20260129 14:38:13.634"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:13.634" endtime="20260129 14:38:13.635"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:13.634" endtime="20260129 14:38:13.635"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:13.634" endtime="20260129 14:38:13.635"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:13.189" endtime="20260129 14:38:13.635"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:11.379" endtime="20260129 14:38:13.635"/>
-</iter>
-<iter>
-<var name="${item}">Why Choose trailQuest?</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:13.636" endtime="20260129 14:38:13.658"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:13.659" endtime="20260129 14:38:13.680"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:13.681" endtime="20260129 14:38:13.987"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:13.988" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Why Choose trailQuest?']'.</msg>
-<status status="PASS" starttime="20260129 14:38:13.987" endtime="20260129 14:38:15.162"/>
-</kw>
-<msg timestamp="20260129 14:38:15.162" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:13.987" endtime="20260129 14:38:15.162"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:15.162" endtime="20260129 14:38:15.163"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:15.163" endtime="20260129 14:38:15.163"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:15.162" endtime="20260129 14:38:15.163"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:15.162" endtime="20260129 14:38:15.163"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:13.635" endtime="20260129 14:38:15.163"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:15.163" endtime="20260129 14:38:15.176"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:15.421" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1812.png"&gt;&lt;img src="selenium-screenshot-1812.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:15.421" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:15.176" endtime="20260129 14:38:15.422"/>
-</kw>
-<msg timestamp="20260129 14:38:15.422" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:15.176" endtime="20260129 14:38:15.422"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:15.422" endtime="20260129 14:38:15.423"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:15.422" endtime="20260129 14:38:15.423"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:15.422" endtime="20260129 14:38:15.423"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:15.423" endtime="20260129 14:38:15.441"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:15.441" endtime="20260129 14:38:15.462"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:15.462" endtime="20260129 14:38:15.747"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:15.748" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:15.747" endtime="20260129 14:38:15.933"/>
-</kw>
-<msg timestamp="20260129 14:38:15.933" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:15.747" endtime="20260129 14:38:15.933"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:15.934" endtime="20260129 14:38:15.934"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:15.934" endtime="20260129 14:38:15.934"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:15.934" endtime="20260129 14:38:15.934"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:15.934" endtime="20260129 14:38:15.934"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:15.423" endtime="20260129 14:38:15.934"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:13.635" endtime="20260129 14:38:15.934"/>
-</iter>
-<iter>
-<var name="${item}">Our Squad</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:15.935" endtime="20260129 14:38:16.186"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:16.186" endtime="20260129 14:38:16.207"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:16.208" endtime="20260129 14:38:16.505"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:16.506" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Our Squad']'.</msg>
-<status status="PASS" starttime="20260129 14:38:16.506" endtime="20260129 14:38:18.350"/>
-</kw>
-<msg timestamp="20260129 14:38:18.351" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:16.505" endtime="20260129 14:38:18.351"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:18.352" endtime="20260129 14:38:18.353"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:18.353" endtime="20260129 14:38:18.353"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:18.351" endtime="20260129 14:38:18.353"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:18.351" endtime="20260129 14:38:18.353"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:15.935" endtime="20260129 14:38:18.353"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:18.353" endtime="20260129 14:38:18.401"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:18.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1813.png"&gt;&lt;img src="selenium-screenshot-1813.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:18.681" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:18.402" endtime="20260129 14:38:18.682"/>
-</kw>
-<msg timestamp="20260129 14:38:18.682" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:18.402" endtime="20260129 14:38:18.682"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:18.682" endtime="20260129 14:38:18.682"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:18.682" endtime="20260129 14:38:18.682"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:18.682" endtime="20260129 14:38:18.682"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:18.683" endtime="20260129 14:38:18.698"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:18.698" endtime="20260129 14:38:18.717"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:18.717" endtime="20260129 14:38:18.993"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:18.994" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:18.994" endtime="20260129 14:38:19.054"/>
-</kw>
-<msg timestamp="20260129 14:38:19.055" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:18.994" endtime="20260129 14:38:19.055"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:19.055" endtime="20260129 14:38:19.055"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:19.055" endtime="20260129 14:38:19.055"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:19.055" endtime="20260129 14:38:19.055"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:19.055" endtime="20260129 14:38:19.056"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:18.682" endtime="20260129 14:38:19.056"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:15.934" endtime="20260129 14:38:19.056"/>
-</iter>
-<iter>
-<var name="${item}">What We Rally For</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:19.056" endtime="20260129 14:38:19.079"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:19.079" endtime="20260129 14:38:19.102"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:19.102" endtime="20260129 14:38:19.388"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:19.389" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='What We Rally For']'.</msg>
-<status status="PASS" starttime="20260129 14:38:19.388" endtime="20260129 14:38:21.976"/>
-</kw>
-<msg timestamp="20260129 14:38:21.976" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:19.388" endtime="20260129 14:38:21.976"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:21.976" endtime="20260129 14:38:21.976"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:21.977" endtime="20260129 14:38:21.977"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:21.976" endtime="20260129 14:38:21.977"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:21.976" endtime="20260129 14:38:21.977"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:19.056" endtime="20260129 14:38:21.977"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:21.977" endtime="20260129 14:38:21.988"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:22.234" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1814.png"&gt;&lt;img src="selenium-screenshot-1814.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:22.234" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:21.988" endtime="20260129 14:38:22.236"/>
-</kw>
-<msg timestamp="20260129 14:38:22.236" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:21.988" endtime="20260129 14:38:22.236"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:22.237" endtime="20260129 14:38:22.237"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:22.236" endtime="20260129 14:38:22.237"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:22.236" endtime="20260129 14:38:22.237"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:22.237" endtime="20260129 14:38:22.255"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:22.255" endtime="20260129 14:38:22.275"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:22.275" endtime="20260129 14:38:22.560"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:22.561" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:22.560" endtime="20260129 14:38:22.749"/>
-</kw>
-<msg timestamp="20260129 14:38:22.749" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:22.560" endtime="20260129 14:38:22.749"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:22.749" endtime="20260129 14:38:22.749"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:22.749" endtime="20260129 14:38:22.750"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:22.749" endtime="20260129 14:38:22.750"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:22.749" endtime="20260129 14:38:22.750"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:22.237" endtime="20260129 14:38:22.750"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:19.056" endtime="20260129 14:38:22.750"/>
-</iter>
-<iter>
-<var name="${item}">Terms &amp; Conditions</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:22.751" endtime="20260129 14:38:22.988"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:22.988" endtime="20260129 14:38:23.012"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:23.012" endtime="20260129 14:38:23.319"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:23.320" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Terms &amp; Conditions']'.</msg>
-<status status="PASS" starttime="20260129 14:38:23.320" endtime="20260129 14:38:24.362"/>
-</kw>
-<msg timestamp="20260129 14:38:24.362" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:23.319" endtime="20260129 14:38:24.362"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:24.363" endtime="20260129 14:38:24.363"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:24.363" endtime="20260129 14:38:24.363"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:24.363" endtime="20260129 14:38:24.363"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:24.362" endtime="20260129 14:38:24.363"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:22.750" endtime="20260129 14:38:24.363"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:24.363" endtime="20260129 14:38:24.376"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:24.624" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1815.png"&gt;&lt;img src="selenium-screenshot-1815.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:24.625" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:24.377" endtime="20260129 14:38:24.626"/>
-</kw>
-<msg timestamp="20260129 14:38:24.626" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:24.376" endtime="20260129 14:38:24.626"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:24.626" endtime="20260129 14:38:24.626"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:24.626" endtime="20260129 14:38:24.626"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:24.626" endtime="20260129 14:38:24.626"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:24.627" endtime="20260129 14:38:24.644"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:24.644" endtime="20260129 14:38:24.663"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:24.663" endtime="20260129 14:38:24.947"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:24.948" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:24.948" endtime="20260129 14:38:25.071"/>
-</kw>
-<msg timestamp="20260129 14:38:25.071" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:24.948" endtime="20260129 14:38:25.071"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:25.072" endtime="20260129 14:38:25.072"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:25.072" endtime="20260129 14:38:25.072"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:25.072" endtime="20260129 14:38:25.072"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:25.072" endtime="20260129 14:38:25.072"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:24.626" endtime="20260129 14:38:25.072"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:22.750" endtime="20260129 14:38:25.072"/>
-</iter>
-<iter>
-<var name="${item}">Privacy Policy</var>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='${item}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:25.073" endtime="20260129 14:38:25.311"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:25.311" endtime="20260129 14:38:25.331"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:25.331" endtime="20260129 14:38:25.645"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:25.646" level="INFO">Clicking element 'xpath=//ul[contains(@class,'subnav')]//a[normalize-space()='Privacy Policy']'.</msg>
-<status status="PASS" starttime="20260129 14:38:25.645" endtime="20260129 14:38:26.740"/>
-</kw>
-<msg timestamp="20260129 14:38:26.740" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:25.645" endtime="20260129 14:38:26.740"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:26.740" endtime="20260129 14:38:26.740"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:26.740" endtime="20260129 14:38:26.740"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:26.740" endtime="20260129 14:38:26.741"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:26.740" endtime="20260129 14:38:26.741"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:25.073" endtime="20260129 14:38:26.741"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath=//body</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20260129 14:38:26.741" endtime="20260129 14:38:26.753"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${mobile_menu_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260129 14:38:27.008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1816.png"&gt;&lt;img src="selenium-screenshot-1816.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260129 14:38:27.008" level="FAIL">The element 'xpath=//button[contains(@class,'icon-menu')]' should be visible, but it is not.</msg>
-<status status="FAIL" starttime="20260129 14:38:26.753" endtime="20260129 14:38:27.009"/>
-</kw>
-<msg timestamp="20260129 14:38:27.009" level="INFO">${mobile_menu_visible} = False</msg>
-<status status="PASS" starttime="20260129 14:38:26.753" endtime="20260129 14:38:27.009"/>
-</kw>
-<if>
-<branch type="IF" condition="${mobile_menu_visible}">
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//button[contains(@class,'icon-menu')]</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<status status="NOT RUN" starttime="20260129 14:38:27.010" endtime="20260129 14:38:27.010"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:27.010" endtime="20260129 14:38:27.010"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:27.010" endtime="20260129 14:38:27.010"/>
-</if>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//span[normalize-space()='${menu_name}']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:27.010" endtime="20260129 14:38:27.027"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:27.027" endtime="20260129 14:38:27.046"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:27.046" endtime="20260129 14:38:27.331"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:27.332" level="INFO">Clicking element 'xpath=//span[normalize-space()='About']'.</msg>
-<status status="PASS" starttime="20260129 14:38:27.332" endtime="20260129 14:38:27.449"/>
-</kw>
-<msg timestamp="20260129 14:38:27.450" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:27.331" endtime="20260129 14:38:27.450"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:27.450" endtime="20260129 14:38:27.450"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:27.450" endtime="20260129 14:38:27.450"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:27.450" endtime="20260129 14:38:27.450"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:27.450" endtime="20260129 14:38:27.450"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:27.010" endtime="20260129 14:38:27.450"/>
-</kw>
-<status status="PASS" starttime="20260129 14:38:25.072" endtime="20260129 14:38:27.450"/>
-</iter>
-<status status="PASS" starttime="20260129 14:38:08.799" endtime="20260129 14:38:27.451"/>
-</for>
-<status status="PASS" starttime="20260129 14:38:08.382" endtime="20260129 14:38:27.451"/>
-</kw>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//a[normalize-space()='FAQs']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:27.451" endtime="20260129 14:38:27.473"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:27.474" endtime="20260129 14:38:27.493"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:27.493" endtime="20260129 14:38:27.787"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:27.788" level="INFO">Clicking element 'xpath=//a[normalize-space()='FAQs']'.</msg>
-<status status="PASS" starttime="20260129 14:38:27.788" endtime="20260129 14:38:28.989"/>
-</kw>
-<msg timestamp="20260129 14:38:28.989" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:27.787" endtime="20260129 14:38:28.989"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:28.991" endtime="20260129 14:38:28.991"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:28.991" endtime="20260129 14:38:28.991"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:28.990" endtime="20260129 14:38:28.991"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:28.990" endtime="20260129 14:38:28.992"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:27.451" endtime="20260129 14:38:28.992"/>
-</kw>
-<kw name="Wait And Click" library="keywords">
-<arg>xpath=//a[normalize-space()='Contact']</arg>
-<doc>Waits until element is visible &amp; enabled, scrolls into view, clicks, fallback to JS if normal click fails</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260129 14:38:28.993" endtime="20260129 14:38:29.021"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20260129 14:38:29.021" endtime="20260129 14:38:29.045"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:29.045" endtime="20260129 14:38:29.330"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${clicked}</var>
-<arg>Click Element</arg>
-<arg>${locator}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260129 14:38:29.332" level="INFO">Clicking element 'xpath=//a[normalize-space()='Contact']'.</msg>
-<status status="PASS" starttime="20260129 14:38:29.331" endtime="20260129 14:38:30.771"/>
-</kw>
-<msg timestamp="20260129 14:38:30.771" level="INFO">${clicked} = True</msg>
-<status status="PASS" starttime="20260129 14:38:29.331" endtime="20260129 14:38:30.771"/>
-</kw>
-<if>
-<branch type="IF" condition="not ${clicked}">
-<kw name="Log" library="BuiltIn">
-<arg>Using JS click fallback for ${locator}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:30.771" endtime="20260129 14:38:30.771"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>document.evaluate("${locator.replace('xpath=','')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20260129 14:38:30.772" endtime="20260129 14:38:30.772"/>
-</kw>
-<status status="NOT RUN" starttime="20260129 14:38:30.771" endtime="20260129 14:38:30.772"/>
-</branch>
-<status status="PASS" starttime="20260129 14:38:30.771" endtime="20260129 14:38:30.772"/>
-</if>
-<status status="PASS" starttime="20260129 14:38:28.992" endtime="20260129 14:38:30.772"/>
-</kw>
-<status status="PASS" starttime="20260129 14:37:45.170" endtime="20260129 14:38:30.772"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath=/html/body/div[4]/div/section/div</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20260129 14:38:30.772" endtime="20260129 14:38:31.080"/>
-</kw>
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:07:06.801104" elapsed="101.997273"/>
-=======
-<status status="NOT RUN" starttime="20260128 17:13:47.106" endtime="20260128 17:13:47.106"/>
-</kw>
-<status status="FAIL" starttime="20260128 17:13:47.062" endtime="20260128 17:13:47.106"/>
-</kw>
-<kw name="click all elements of homepage" library="home_page">
-<status status="NOT RUN" starttime="20260128 17:13:47.107" endtime="20260128 17:13:47.107"/>
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<status status="PASS" starttime="20260129 14:37:42.942" endtime="20260129 14:38:31.081"/>
->>>>>>> e5447c0 (Test)
+<kw name="Test Amayangri" library="treks_tours">
+<status status="NOT RUN" starttime="20260129 15:13:48.809" endtime="20260129 15:13:48.809"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:08:48.802569" elapsed="2.382209"/>
-=======
-<status status="PASS" starttime="20260129 14:38:31.081" endtime="20260129 14:38:33.394"/>
->>>>>>> e5447c0 (Test)
-</kw>
-<status status="PASS" starttime="20260129 14:37:32.626" endtime="20260129 14:38:33.394"/>
-</test>
-<<<<<<< HEAD
-<status status="PASS" start="2026-01-28T11:06:49.519981" elapsed="121.667969"/>
-=======
-<status status="PASS" starttime="20260128 17:13:47.107" endtime="20260128 17:13:47.107"/>
-</kw>
-<tag>navigation</tag>
-<tag>smoke</tag>
-<tag>ui</tag>
-<status status="FAIL" starttime="20260128 17:13:47.061" endtime="20260128 17:13:47.108">No keyword with name 'Get Operating System' found.</status>
-</test>
-<status status="FAIL" starttime="20260128 17:13:46.209" endtime="20260128 17:13:47.109"/>
-</suite>
-<status status="FAIL" starttime="20260128 17:13:46.130" endtime="20260128 17:13:47.110"/>
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<status status="PASS" starttime="20260129 14:37:31.973" endtime="20260129 14:38:33.396"/>
->>>>>>> e5447c0 (Test)
-</suite>
-<statistics>
-<total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
-</total>
-<tag>
-<stat pass="0" fail="1" skip="0">navigation</stat>
-<stat pass="0" fail="1" skip="0">smoke</stat>
-<stat pass="0" fail="1" skip="0">ui</stat>
-</tag>
-<suite>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<stat name="Home Page Button" id="s1" pass="1" fail="0" skip="0">Home Page Button</stat>
-</suite>
-</statistics>
 <errors>
-<msg time="2026-01-28T11:06:54.340762" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
-=======
-<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Home Page Button">Tests.Home Page Button</stat>
-</suite>
-</statistics>
-<errors>
->>>>>>> 12a6bb9 (ADDED TAGS)
-=======
-<stat pass="1" fail="0" skip="0" id="s1" name="Home Page Button">Home Page Button</stat>
-</suite>
-</statistics>
-<errors>
->>>>>>> e5447c0 (Test)
+<msg timestamp="20260129 15:13:48.765" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20260129 15:13:50.855" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
