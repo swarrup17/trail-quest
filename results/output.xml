@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.4.1 (Python 3.10.11 on win32)" generated="2026-01-28T11:06:49.519981" rpa="false" schemaversion="5">
 <suite id="s1" name="Home Page Button" source="C:\Users\Swarup Dahal\Desktop\project\trail-quest\tests\home_page_button.robot">
 <test id="s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
@@ -6,10 +7,20 @@
 <kw name="Open Browser To Application" owner="browser">
 <kw name="Evaluate" owner="BuiltIn">
 <msg time="2026-01-28T11:06:50.015505" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016F8FD99000&gt;</msg>
+=======
+<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260128 17:13:46.128" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests">
+<suite id="s1-s1" name="Home Page Button" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\home_page_button.robot">
+<test id="s1-s1-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+>>>>>>> 12a6bb9 (ADDED TAGS)
 <var>${chrome_options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>modules=selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
@@ -48,25 +59,123 @@
 <status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
+=======
+<msg timestamp="20260128 17:13:47.063" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FAF2CA6BA0&gt;</msg>
+<status status="PASS" starttime="20260128 17:13:47.063" endtime="20260128 17:13:47.063"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:13:47.074" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.074"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.074" endtime="20260128 17:13:47.075"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.075" endtime="20260128 17:13:47.075"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<status status="NOT RUN" starttime="20260128 17:13:47.082" endtime="20260128 17:13:47.082"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<status status="NOT RUN" starttime="20260128 17:13:47.090" endtime="20260128 17:13:47.090"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<status status="NOT RUN" starttime="20260128 17:13:47.095" endtime="20260128 17:13:47.095"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<status status="NOT RUN" starttime="20260128 17:13:47.103" endtime="20260128 17:13:47.104"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.104"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.104"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+>>>>>>> 12a6bb9 (ADDED TAGS)
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2026-01-28T11:06:50.015505" level="INFO">Opening browser 'chrome' to base url 'https://trailquest.global/'.</msg>
 <msg time="2026-01-28T11:06:54.340762" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+=======
+<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:13:47.104" endtime="20260128 17:13:47.105"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+>>>>>>> 12a6bb9 (ADDED TAGS)
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=${chrome_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="14.375418"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
 <status status="PASS" start="2026-01-28T11:07:04.392704" elapsed="0.005036"/>
+=======
+<status status="NOT RUN" starttime="20260128 17:13:47.105" endtime="20260128 17:13:47.105"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:13:47.063" endtime="20260128 17:13:47.106"/>
+>>>>>>> 12a6bb9 (ADDED TAGS)
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>${WINDOW_WIDTH}</arg>
@@ -81,6 +190,7 @@
 <msg time="2026-01-28T11:07:06.798071" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2026-01-28T11:07:04.789670" elapsed="2.008911"/>
 </kw>
 <status status="PASS" start="2026-01-28T11:06:50.015505" elapsed="16.783076"/>
@@ -1999,26 +2109,58 @@
 <status status="PASS" start="2026-01-28T11:08:48.447959" elapsed="0.350418"/>
 </kw>
 <status status="PASS" start="2026-01-28T11:07:06.801104" elapsed="101.997273"/>
+=======
+<status status="NOT RUN" starttime="20260128 17:13:47.106" endtime="20260128 17:13:47.106"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:13:47.062" endtime="20260128 17:13:47.106"/>
+</kw>
+<kw name="click all elements of homepage" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:13:47.107" endtime="20260128 17:13:47.107"/>
+>>>>>>> 12a6bb9 (ADDED TAGS)
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2026-01-28T11:08:48.802569" elapsed="2.382209"/>
 </kw>
 <status status="PASS" start="2026-01-28T11:06:50.013337" elapsed="121.171441"/>
 </test>
 <status status="PASS" start="2026-01-28T11:06:49.519981" elapsed="121.667969"/>
+=======
+<status status="PASS" starttime="20260128 17:13:47.107" endtime="20260128 17:13:47.107"/>
+</kw>
+<tag>navigation</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:13:47.061" endtime="20260128 17:13:47.108">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:13:46.209" endtime="20260128 17:13:47.109"/>
+</suite>
+<status status="FAIL" starttime="20260128 17:13:46.130" endtime="20260128 17:13:47.110"/>
+>>>>>>> 12a6bb9 (ADDED TAGS)
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">navigation</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">ui</stat>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat name="Home Page Button" id="s1" pass="1" fail="0" skip="0">Home Page Button</stat>
 </suite>
 </statistics>
 <errors>
 <msg time="2026-01-28T11:06:54.340762" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+=======
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Home Page Button">Tests.Home Page Button</stat>
+</suite>
+</statistics>
+<errors>
+>>>>>>> 12a6bb9 (ADDED TAGS)
 </errors>
 </robot>

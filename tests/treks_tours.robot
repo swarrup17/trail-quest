@@ -7,6 +7,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Treks and Tours Test
+    [Tags]    regression    ui    treks
     Open Homepage
     Test The Push Your Limit
     Test KanchenjungaTrek

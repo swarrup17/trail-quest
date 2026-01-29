@@ -50,7 +50,7 @@ Handle Share Button Click
 
     # Try multiple click methods
     ${status}=    Run Keyword And Return Status    Click Element    ${share_button_locator}
-    Run Keyword Unless    ${status}    Click Element Using JavaScript    ${share_button_locator}
+    Run Keyword If    not ${status}    Click Element Using JavaScript    ${share_button_locator}
 
     # Wait for new window to open
     Sleep    3s

@@ -7,6 +7,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Declutter Your Mind Test
+    [Tags]    regression    ui    declutter
     Open Homepage
     Verify Logo Is Visible
     Open Trek And Tours Menu

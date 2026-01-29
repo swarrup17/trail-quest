@@ -26,14 +26,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements
 
+<<<<<<< HEAD
       # 4 Install Chrome (using maintained GitHub Action)
+=======
+      # 4️⃣ Install Chrome (using maintained GitHub Action)
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Install Chrome
         id: chrome
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
 
+<<<<<<< HEAD
       # 5 Start virtual display for Chrome (Selenium Manager will handle ChromeDriver)
+=======
+      # 5️⃣ Start virtual display for Chrome (Selenium Manager will handle ChromeDriver)
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Start Xvfb
         run: |
           Xvfb :99 -screen 0 1920x1080x24 >/dev/null 2>&1 &
@@ -41,19 +49,31 @@ jobs:
         env:
           DISPLAY: :99
 
+<<<<<<< HEAD
       # 6 Run Robot Tests
+=======
+      # 6️⃣ Run Robot Tests
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Run Robot Tests
         run: |
           robot -d output tests/
 
+<<<<<<< HEAD
       # 7 Zip key Robot output files only (keep email attachment small)
+=======
+      # 8️⃣ Zip key Robot output files only (keep email attachment small)
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Zip Robot Reports
         if: always()
         run: |
           cd output
           zip -r ../robot-reports.zip report.html log.html output.xml || echo "No standard Robot output files to zip"
 
+<<<<<<< HEAD
       # 8 Upload ZIP artifact
+=======
+      # 9️⃣ Upload ZIP artifact
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Upload Robot Reports ZIP
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,7 +81,11 @@ jobs:
           name: robot-framework-reports
           path: robot-reports.zip
 
+<<<<<<< HEAD
       # 9 Send test report email
+=======
+      # 🔟 Send test report email
+>>>>>>> 12a6bb9 (ADDED TAGS)
       - name: Send test report email
         if: always()
         uses: dawidd6/action-send-mail@v3

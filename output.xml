@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.9 on win32)" generated="20260128 17:14:11.434" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests">
+<suite id="s1-s1" name="Declutter Your Mind" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\declutter_your_mind.robot">
+<test id="s1-s1-t1" name="Declutter Your Mind Test" line="9">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>modules=selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260128 17:14:11.998" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002237036F620&gt;</msg>
+<status status="PASS" starttime="20260128 17:14:11.997" endtime="20260128 17:14:11.998"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:14:12.009" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:14:12.008" endtime="20260128 17:14:12.009"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.009" endtime="20260128 17:14:12.009"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.009" endtime="20260128 17:14:12.009"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.009" endtime="20260128 17:14:12.009"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.009" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.010" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.010" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.010" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.010" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.010" endtime="20260128 17:14:12.010"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.011" endtime="20260128 17:14:12.011"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.011" endtime="20260128 17:14:12.011"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:14:12.011" endtime="20260128 17:14:12.011"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:14:12.011" endtime="20260128 17:14:12.011"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.011" endtime="20260128 17:14:12.011"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:11.997" endtime="20260128 17:14:12.012"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.012" endtime="20260128 17:14:12.012"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:11.997" endtime="20260128 17:14:12.012"/>
+</kw>
+<kw name="Verify Logo Is Visible" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.012" endtime="20260128 17:14:12.012"/>
+</kw>
+<kw name="Open Trek And Tours Menu" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.013" endtime="20260128 17:14:12.013"/>
+</kw>
+<kw name="Test The Annapurna Reset" library="Declutter_your_mind">
+<status status="NOT RUN" starttime="20260128 17:14:12.013" endtime="20260128 17:14:12.013"/>
+</kw>
+<kw name="Test The Mardi Path" library="Declutter_your_mind">
+<status status="NOT RUN" starttime="20260128 17:14:12.014" endtime="20260128 17:14:12.014"/>
+</kw>
+<kw name="Test The Khopra Reset" library="Declutter_your_mind">
+<status status="NOT RUN" starttime="20260128 17:14:12.014" endtime="20260128 17:14:12.014"/>
+</kw>
+<kw name="Test Ghandruk Reset" library="Declutter_your_mind">
+<status status="NOT RUN" starttime="20260128 17:14:12.014" endtime="20260128 17:14:12.014"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260128 17:14:12.015" endtime="20260128 17:14:12.015"/>
+</kw>
+<tag>declutter</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:14:11.996" endtime="20260128 17:14:12.016">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:14:11.488" endtime="20260128 17:14:12.017"/>
+</suite>
+<suite id="s1-s2" name="Explore The Ancient" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\explore_the_ancient.robot">
+<test id="s1-s2-t1" name="Explore The Ancient Tests" line="8">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>modules=selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260128 17:14:12.068" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000223702CBED0&gt;</msg>
+<status status="PASS" starttime="20260128 17:14:12.068" endtime="20260128 17:14:12.068"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:14:12.078" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:14:12.078" endtime="20260128 17:14:12.078"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.079" endtime="20260128 17:14:12.079"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.079" endtime="20260128 17:14:12.079"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.079" endtime="20260128 17:14:12.079"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.079" endtime="20260128 17:14:12.079"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.080" endtime="20260128 17:14:12.080"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.081" endtime="20260128 17:14:12.081"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:14:12.081" endtime="20260128 17:14:12.081"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:14:12.081" endtime="20260128 17:14:12.081"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.081" endtime="20260128 17:14:12.081"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.068" endtime="20260128 17:14:12.082"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.082" endtime="20260128 17:14:12.082"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.067" endtime="20260128 17:14:12.082"/>
+</kw>
+<kw name="Verify Logo Is Visible" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.082" endtime="20260128 17:14:12.082"/>
+</kw>
+<kw name="Open Trek And Tours Menu" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.083" endtime="20260128 17:14:12.083"/>
+</kw>
+<kw name="Test Off the beaten" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.083" endtime="20260128 17:14:12.083"/>
+</kw>
+<kw name="Test Muktinath Tours" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.083" endtime="20260128 17:14:12.083"/>
+</kw>
+<kw name="Test Kathmandu Pokhara Lumbini" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.084" endtime="20260128 17:14:12.084"/>
+</kw>
+<kw name="Test 7 UNESCO Heritage" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.084" endtime="20260128 17:14:12.084"/>
+</kw>
+<kw name="Test KTM Valley Tour" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.084" endtime="20260128 17:14:12.084"/>
+</kw>
+<kw name="Test Narayanhiti Durbar" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.085" endtime="20260128 17:14:12.085"/>
+</kw>
+<kw name="Test Kathmandu Durbar" library="Explore_The_Ancient">
+<status status="NOT RUN" starttime="20260128 17:14:12.085" endtime="20260128 17:14:12.085"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260128 17:14:12.086" endtime="20260128 17:14:12.086"/>
+</kw>
+<tag>ancient</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:14:12.067" endtime="20260128 17:14:12.086">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:14:12.019" endtime="20260128 17:14:12.088"/>
+</suite>
+<suite id="s1-s3" name="Home Page Button" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\home_page_button.robot">
+<test id="s1-s3-t1" name="Verify Homepage Header Buttons Are Clickable" line="9">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>modules=selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260128 17:14:12.107" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002236FE23890&gt;</msg>
+<status status="PASS" starttime="20260128 17:14:12.107" endtime="20260128 17:14:12.107"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:14:12.117" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:14:12.117" endtime="20260128 17:14:12.117"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.117" endtime="20260128 17:14:12.117"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.117" endtime="20260128 17:14:12.117"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.118" endtime="20260128 17:14:12.118"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.118" endtime="20260128 17:14:12.118"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<status status="NOT RUN" starttime="20260128 17:14:12.128" endtime="20260128 17:14:12.128"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<status status="NOT RUN" starttime="20260128 17:14:12.141" endtime="20260128 17:14:12.141"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<status status="NOT RUN" starttime="20260128 17:14:12.152" endtime="20260128 17:14:12.153"/>
+</kw>
+<kw name="Append To List">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<status status="NOT RUN" starttime="20260128 17:14:12.163" endtime="20260128 17:14:12.163"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.163" endtime="20260128 17:14:12.163"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.163" endtime="20260128 17:14:12.163"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.164" endtime="20260128 17:14:12.164"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:14:12.164" endtime="20260128 17:14:12.164"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:14:12.163" endtime="20260128 17:14:12.164"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.164" endtime="20260128 17:14:12.164"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.106" endtime="20260128 17:14:12.164"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.164" endtime="20260128 17:14:12.165"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.106" endtime="20260128 17:14:12.165"/>
+</kw>
+<kw name="click all elements of homepage" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.166" endtime="20260128 17:14:12.166"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260128 17:14:12.167" endtime="20260128 17:14:12.167"/>
+</kw>
+<tag>navigation</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:14:12.105" endtime="20260128 17:14:12.168">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:14:12.089" endtime="20260128 17:14:12.169"/>
+</suite>
+<suite id="s1-s4" name="Reconnect With Nature" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\reconnect_with_nature.robot">
+<test id="s1-s4-t1" name="Reconnect With Nature Test" line="8">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>modules=selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260128 17:14:12.222" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000022370347CE0&gt;</msg>
+<status status="PASS" starttime="20260128 17:14:12.221" endtime="20260128 17:14:12.222"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:14:12.236" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:14:12.236" endtime="20260128 17:14:12.236"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.236" endtime="20260128 17:14:12.236"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.236" endtime="20260128 17:14:12.236"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.236" endtime="20260128 17:14:12.236"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.237" endtime="20260128 17:14:12.237"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.238" endtime="20260128 17:14:12.238"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.238" endtime="20260128 17:14:12.238"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:14:12.238" endtime="20260128 17:14:12.238"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:14:12.238" endtime="20260128 17:14:12.238"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.238" endtime="20260128 17:14:12.238"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.221" endtime="20260128 17:14:12.239"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.239" endtime="20260128 17:14:12.239"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.221" endtime="20260128 17:14:12.239"/>
+</kw>
+<kw name="Verify Logo Is Visible" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.239" endtime="20260128 17:14:12.239"/>
+</kw>
+<kw name="Open Trek And Tours Menu" library="home_page">
+<status status="NOT RUN" starttime="20260128 17:14:12.239" endtime="20260128 17:14:12.239"/>
+</kw>
+<kw name="Test Nepal Unbound Heritage to the pulse of wild" library="reconnect_with_nature">
+<status status="NOT RUN" starttime="20260128 17:14:12.240" endtime="20260128 17:14:12.240"/>
+</kw>
+<kw name="Test The Valley Tales" library="reconnect_with_nature">
+<status status="NOT RUN" starttime="20260128 17:14:12.240" endtime="20260128 17:14:12.240"/>
+</kw>
+<kw name="Test The Nepal Tales" library="reconnect_with_nature">
+<status status="NOT RUN" starttime="20260128 17:14:12.241" endtime="20260128 17:14:12.241"/>
+</kw>
+<kw name="Test The Kalinchwok Crest" library="reconnect_with_nature">
+<status status="NOT RUN" starttime="20260128 17:14:12.241" endtime="20260128 17:14:12.241"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260128 17:14:12.241" endtime="20260128 17:14:12.242"/>
+</kw>
+<tag>reconnect</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:14:12.220" endtime="20260128 17:14:12.242">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:14:12.170" endtime="20260128 17:14:12.243"/>
+</suite>
+<suite id="s1-s5" name="Treks Tours" source="C:\Users\Swarup Dahal\Desktop\trail-quest\tests\treks_tours.robot">
+<test id="s1-s5-t1" name="Treks and Tours Test" line="9">
+<kw name="Open Homepage" library="home_page">
+<kw name="Open Browser To Application" library="browser">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>modules=selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260128 17:14:12.265" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000022370346780&gt;</msg>
+<status status="PASS" starttime="20260128 17:14:12.264" endtime="20260128 17:14:12.265"/>
+</kw>
+<kw name="Get Operating System">
+<var>${os}</var>
+<msg timestamp="20260128 17:14:12.276" level="FAIL">No keyword with name 'Get Operating System' found.</msg>
+<status status="FAIL" starttime="20260128 17:14:12.276" endtime="20260128 17:14:12.276"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${args}</var>
+<arg>--window-size=1920,1080</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.277" endtime="20260128 17:14:12.277"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--no-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.277" endtime="20260128 17:14:12.277"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.277" endtime="20260128 17:14:12.277"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--disable-setuid-sandbox</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.277" endtime="20260128 17:14:12.277"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-gpu</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.277" endtime="20260128 17:14:12.277"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-software-rasterizer</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.278"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--remote-debugging-port=9222</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.278"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${args}</arg>
+<arg>--disable-extensions</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.278"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Linux' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless=new</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.278"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HEADLESS}'=='True' and 'Windows' in '${os}'</arg>
+<arg>Append To List</arg>
+<arg>${args}</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.278"/>
+</kw>
+<for flavor="IN">
+<var>${arg}</var>
+<value>@{args}</value>
+<iter>
+<var name="${arg}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.279" endtime="20260128 17:14:12.279"/>
+</kw>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.279"/>
+</iter>
+<status status="NOT RUN" starttime="20260128 17:14:12.278" endtime="20260128 17:14:12.279"/>
+</for>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.279" endtime="20260128 17:14:12.279"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.264" endtime="20260128 17:14:12.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.279" endtime="20260128 17:14:12.279"/>
+</kw>
+<status status="FAIL" starttime="20260128 17:14:12.264" endtime="20260128 17:14:12.279"/>
+</kw>
+<kw name="Test The Push Your Limit" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.280" endtime="20260128 17:14:12.280"/>
+</kw>
+<kw name="Test KanchenjungaTrek" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.281" endtime="20260128 17:14:12.281"/>
+</kw>
+<kw name="Test Everest Via Gokyo_Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.281" endtime="20260128 17:14:12.281"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/header/div[1]/div/div/div/a/img[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.281" endtime="20260128 17:14:12.282"/>
+</kw>
+<kw name="Test Annapurna Circuit Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.282" endtime="20260128 17:14:12.282"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/header/div[1]/div/div/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.282" endtime="20260128 17:14:12.282"/>
+</kw>
+<kw name="Test Manaslu Circuit Trek" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.283" endtime="20260128 17:14:12.283"/>
+</kw>
+<kw name="Test Annapurna Base Camp" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.283" endtime="20260128 17:14:12.283"/>
+</kw>
+<kw name="Test Everest Base Camp" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.283" endtime="20260128 17:14:12.283"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[3]/div[1]/section[1]/div/div[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20260128 17:14:12.284" endtime="20260128 17:14:12.284"/>
+</kw>
+<kw name="Test Mardi" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.284" endtime="20260128 17:14:12.284"/>
+</kw>
+<kw name="Test Langtang" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.284" endtime="20260128 17:14:12.284"/>
+</kw>
+<kw name="Test Poon Hill" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.285" endtime="20260128 17:14:12.285"/>
+</kw>
+<kw name="Test Amayangri" library="treks_tours">
+<status status="NOT RUN" starttime="20260128 17:14:12.285" endtime="20260128 17:14:12.285"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260128 17:14:12.285" endtime="20260128 17:14:12.286"/>
+</kw>
+<tag>regression</tag>
+<tag>treks</tag>
+<tag>ui</tag>
+<status status="FAIL" starttime="20260128 17:14:12.263" endtime="20260128 17:14:12.286">No keyword with name 'Get Operating System' found.</status>
+</test>
+<status status="FAIL" starttime="20260128 17:14:12.245" endtime="20260128 17:14:12.287"/>
+</suite>
+<status status="FAIL" starttime="20260128 17:14:11.454" endtime="20260128 17:14:12.288"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">ancient</stat>
+<stat pass="0" fail="1" skip="0">declutter</stat>
+<stat pass="0" fail="1" skip="0">navigation</stat>
+<stat pass="0" fail="1" skip="0">reconnect</stat>
+<stat pass="0" fail="4" skip="0">regression</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">treks</stat>
+<stat pass="0" fail="5" skip="0">ui</stat>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Declutter Your Mind">Tests.Declutter Your Mind</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Explore The Ancient">Tests.Explore The Ancient</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="Home Page Button">Tests.Home Page Button</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s4" name="Reconnect With Nature">Tests.Reconnect With Nature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s5" name="Treks Tours">Tests.Treks Tours</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260128 17:14:11.450" level="ERROR">Taking listener 'tags' into use failed: Importing listener 'tags' failed: ModuleNotFoundError: No module named 'tags'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Swarup Dahal\miniconda3\Scripts\robot.exe
+  C:\Users\Swarup Dahal\miniconda3\python313.zip
+  C:\Users\Swarup Dahal\miniconda3\DLLs
+  C:\Users\Swarup Dahal\miniconda3\Lib
+  C:\Users\Swarup Dahal\miniconda3
+  C:\Users\Swarup Dahal\miniconda3\Lib\site-packages</msg>
+</errors>
+</robot>
