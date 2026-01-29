@@ -192,7 +192,6 @@ Test Narayanhiti Navbar
 
         ${text}=    Get Text    ${link}
         Log    Clicking sticky navbar link: ${text}
-
         Scroll Element Into View         ${link}
         Wait Until Element Is Visible    ${link}    10s
         Wait Until Element Is Enabled    ${link}    10s
